@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#181A20">
+  <title>Binance Security Verification | Image Selection CAPTCHA Trainer</title>
+  <meta name="description" content="Authentic Binance 3x3 Image Selection CAPTCHA practice trainer with 10-second auto-cycle, millisecond speed tracking, and 5 authentic challenge pictures.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <header class="binance-navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <svg class="binance-logo-svg" viewBox="0 0 120 24" width="120" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.002 0L6.47 5.534l2.583 2.583L12.002 5.17l2.949 2.948 2.583-2.584L12.002 0zm-7.067 7.068L0 12.002l4.935 4.934 2.584-2.583-2.351-2.351 2.351-2.351-2.584-2.584zm14.134 0l-2.584 2.584 2.351 2.351-2.351 2.351 2.584 2.583 4.935-4.934-4.935-4.934zM12.002 8.706L8.707 12.002l3.295 3.295 3.295-3.295-3.295-3.296zm-7.067 10.36L2.35 16.482 0 18.833l4.935 4.935 7.067-7.067-2.584-2.583-4.483 4.948zm14.134 0l-4.483-4.948-2.584 2.583 7.067 7.067 4.935-4.935-2.351-2.351-2.584 2.584z" fill="#F0B90B"/>
+          <text x="32" y="17" fill="#EAECEF" font-family="'IBM Plex Sans', sans-serif" font-weight="700" font-size="15" letter-spacing="1">BINANCE</text>
+        </svg>
+        <span class="nav-badge">IMAGE CAPTCHA TRAINER</span>
+      </div>
+
+      <div class="nav-actions">
+        <div class="status-indicator">
+          <span class="pulse-dot"></span>
+          <span id="navTimerStatus">10s Auto-Cycle: ON</span>
+        </div>
+        <button id="btnOpenPhoneModal" class="nav-btn highlight" title="Open on iPhone / Mobile via QR or Live Link">
+          <span>📱 Open on iPhone</span>
+        </button>
+        <button id="btnOpenImgModal" class="nav-btn" title="View & Switch 5 Pictures">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-1.96-2.36L6.5 17h11l-3.54-4.71z"/>
+          </svg>
+          <span>5 Challenge Pictures</span>
+        </button>
+        <button id="btnSoundToggle" class="nav-btn icon-only" title="Toggle Sound">
+          <span id="soundIcon">🔊</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Workspace -->
+  <main class="main-wrapper">
+    <!-- Left Column: The Authentic Binance CAPTCHA Dialog -->
+    <div class="verification-center">
+      
+      <!-- Binance Security Verification Modal Card -->
+      <section class="binance-captcha-card" id="captchaCard" aria-label="Security Verification Dialog">
+        
+        <!-- 10-Second Countdown Progress Bar -->
+        <div class="timer-bar-container">
+          <div class="timer-bar-fill" id="timerBarFill"></div>
+          <div class="timer-bar-info">
+            <span class="timer-label">Next CAPTCHA in:</span>
+            <span class="timer-countdown" id="timerCountdown">10.0s</span>
+          </div>
+        </div>
+
+        <!-- The Image-Selection CAPTCHA Stage -->
+        <div class="captcha-stage-container" id="stageContainer">
+          
+          <!-- Challenge Header (rendered from prompt) -->
+          <div class="captcha-stage-header">
+            <p class="prompt-subtext">Please select all images with</p>
+            <h1 class="prompt-keyword" id="promptKeyword">panda</h1>
+          </div>
+
+          <!-- 3x3 Grid Wrapper with the authentic user image background -->
+          <div class="captcha-grid-wrapper" id="gridWrapper">
+            <img src="assets/challenges/challenge_1_panda.png" alt="Captcha Challenge" class="captcha-raw-img" id="captchaRawImg">
+            
+            <!-- Interactive 3x3 Clickable Hotspot Grid Overlay -->
+            <div class="interactive-grid-overlay" id="interactiveGrid">
+              <div class="grid-cell" data-index="0" title="Tile 1 [Press 1 or Q]">
+                <div class="cell-check-badge">✓</div>
+              </div>
+              <div class="grid-cell" data-index="1" title="Tile 2 [Press 2 or W]">
+                <div class="cell-check-badge">✓</div>
+              </div>
+              <div class="grid-cell" data-index="2" title="Tile 3 [Press 3 or E]">
+                <div class="cell-check-badge">✓</div>
+              </div>
+              <div class="grid-cell" data-index="3" title="Tile 4 [Press 4 or A]">
+                <div class="cell-check-badge">✓</div>
+              </div>
+              <div class="grid-cell" data-index="4" title="Tile 5 [Press 5 or S]">
+                <div class="cell-check-badge">✓</div>
+              </div>
+              <div class="grid-cell" data-index="5" title="Tile 6 [Press 6 or D]">
+                <div class="cell-check-badge">✓</div>
+              </div>
+              <div class="grid-cell" data-index="6" title="Tile 7 [Press 7 or Z]">
+                <div class="cell-check-badge">✓</div>
+              </div>
+              <div class="grid-cell" data-index="7" title="Tile 8 [Press 8 or X]">
+                <div class="cell-check-badge">✓</div>
+              </div>
+              <div class="grid-cell" data-index="8" title="Tile 9 [Press 9 or C]">
+                <div class="cell-check-badge">✓</div>
+              </div>
+            </div>
+
+            <!-- Interactive Hotspot Buttons Overlay at bottom (Close, Refresh, Verify) -->
+            <div class="bottom-controls-overlay">
+              <button class="hotspot-btn btn-close-hotspot" id="btnCloseHotspot" title="Reset Challenge"></button>
+              <button class="hotspot-btn btn-refresh-hotspot" id="btnRefreshHotspot" title="Load Next Challenge"></button>
+              <button class="hotspot-btn btn-verify-hotspot" id="btnVerifyHotspot" title="Verify Selection [Press Enter / Space]">
+                <span class="btn-verify-text">Verify</span>
+              </button>
+            </div>
+
+            <!-- Feedback Message Overlay (Success / Fail / Timeout) -->
+            <div class="status-banner" id="statusBanner">
+              <div class="status-icon" id="statusIcon">✓</div>
+              <div class="status-text-wrap">
+                <span class="status-title" id="statusTitle">Verification Success</span>
+                <span class="status-desc" id="statusDesc">Completed in 1.42s!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Stopwatch & Current Challenge Indicator -->
+        <div class="card-footer-bar">
+          <div class="footer-left">
+            <span class="challenge-indicator" id="challengeIndicator">Picture 1 of 5 (panda A)</span>
+          </div>
+          <div class="footer-right">
+            <div class="live-stopwatch">
+              <span class="stopwatch-dot"></span>
+              <span id="liveTimeDisplay">0.00s</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Challenge Switcher Bar -->
+      <div class="challenge-tabs-bar">
+        <span class="tabs-label">Practice Challenge:</span>
+        <button class="tab-chip active" data-challenge="0">#1 Panda A</button>
+        <button class="tab-chip" data-challenge="1">#2 Elephant A</button>
+        <button class="tab-chip" data-challenge="2">#3 Bicycle</button>
+        <button class="tab-chip" data-challenge="3">#4 Elephant B</button>
+        <button class="tab-chip" data-challenge="4">#5 Panda B</button>
+      </div>
+
+      <!-- Helper Keyboard Shortcuts Hint -->
+      <div class="keyboard-hints-pill">
+        <span>⚡ <strong>Speedrun Keys:</strong> Numpad <strong>1-9</strong> (or <strong>QWE/ASD/ZXC</strong>) to select tiles • <strong>Enter/Space</strong> to Verify</span>
+      </div>
+    </div>
+
+    <!-- Right Column: Performance & Speedrun Stats Dashboard -->
+    <aside class="stats-sidebar">
+      <div class="stats-card">
+        <div class="stats-card-header">
+          <h2>SPEEDRUN METRICS</h2>
+          <button class="stats-reset-btn" id="btnResetStats" title="Reset stats">Reset</button>
+        </div>
+
+        <div class="stats-grid">
+          <!-- Last Result -->
+          <div class="stat-box highlight">
+            <div class="stat-meta">LAST TIME</div>
+            <div class="stat-value" id="statLastTime">--</div>
+            <div class="stat-sub" id="statLastSub">Ready for round 1</div>
+          </div>
+
+          <!-- Best Time -->
+          <div class="stat-box success">
+            <div class="stat-meta">BEST SPEED</div>
+            <div class="stat-value" id="statBestTime">--</div>
+            <div class="stat-sub" id="statBestSub">Target: &lt; 1.50s</div>
+          </div>
+
+          <!-- Average Solve Time -->
+          <div class="stat-box">
+            <div class="stat-meta">AVG TIME</div>
+            <div class="stat-value" id="statAvgTime">--</div>
+            <div class="stat-sub" id="statAvgSub">Over successful</div>
+          </div>
+
+          <!-- Accuracy Rate -->
+          <div class="stat-box">
+            <div class="stat-meta">ACCURACY</div>
+            <div class="stat-value" id="statAccuracy">0%</div>
+            <div class="stat-sub" id="statRoundsPlayed">0 / 0 Solved</div>
+          </div>
+        </div>
+
+        <!-- Binance Benchmark Rank -->
+        <div class="speed-benchmark-box">
+          <div class="benchmark-header">
+            <span>Speedrun Rating</span>
+            <span class="rank-badge" id="rankBadge">ROOKIE</span>
+          </div>
+          <div class="benchmark-progress">
+            <div class="benchmark-fill" id="benchmarkFill" style="width: 20%;"></div>
+          </div>
+          <div class="benchmark-labels">
+            <span>&gt;4.0s (Slow)</span>
+            <span>2.5s (Average)</span>
+            <span>&lt;1.2s (Godlike)</span>
+          </div>
+        </div>
+
+        <!-- Live History Log -->
+        <div class="history-section">
+          <h3>RECENT ATTEMPTS</h3>
+          <div class="history-list" id="historyList">
+            <div class="history-empty">Solve a CAPTCHA to record history</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Modal: View 4 Challenge Pictures -->
+  <div class="modal-backdrop" id="imgModalBackdrop">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3>The 5 Binance Challenge Pictures</h3>
+        <button class="modal-close-btn" id="btnCloseImgModal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <p class="modal-desc">
+          Your 5 exact challenge screenshots are loaded! The app continuously cycles through them every <strong>10 seconds</strong>:
+        </p>
+
+        <!-- 5 Challenge Preview Cards -->
+        <div class="challenge-previews-grid">
+          <div class="preview-card" data-idx="0">
+            <div class="preview-badge">#1 PANDA A</div>
+            <img src="assets/challenges/challenge_1_panda.png" alt="Challenge 1: Panda A">
+            <div class="preview-info">
+              <span class="preview-target">Target: <strong>panda</strong></span>
+              <span class="preview-sol">Answers: Tile 2, 4, 5</span>
+              <button class="btn-select-challenge" data-idx="0">Practice This</button>
+            </div>
+          </div>
+
+          <div class="preview-card" data-idx="1">
+            <div class="preview-badge">#2 ELEPHANT A</div>
+            <img src="assets/challenges/challenge_2_elephant.jpg" alt="Challenge 2: Elephant A">
+            <div class="preview-info">
+              <span class="preview-target">Target: <strong>elephant</strong></span>
+              <span class="preview-sol">Answers: Tile 3, 6, 7, 8</span>
+              <button class="btn-select-challenge" data-idx="1">Practice This</button>
+            </div>
+          </div>
+
+          <div class="preview-card" data-idx="2">
+            <div class="preview-badge">#3 BICYCLE</div>
+            <img src="assets/challenges/challenge_3_bicycle.png" alt="Challenge 3: Bicycle">
+            <div class="preview-info">
+              <span class="preview-target">Target: <strong>bicycle</strong></span>
+              <span class="preview-sol">Answers: Tile 2, 3, 8</span>
+              <button class="btn-select-challenge" data-idx="2">Practice This</button>
+            </div>
+          </div>
+
+          <div class="preview-card" data-idx="3">
+            <div class="preview-badge">#4 ELEPHANT B</div>
+            <img src="assets/challenges/challenge_4_elephant.jpg" alt="Challenge 4: Elephant B">
+            <div class="preview-info">
+              <span class="preview-target">Target: <strong>elephant</strong></span>
+              <span class="preview-sol">Answers: Tile 2, 3, 9</span>
+              <button class="btn-select-challenge" data-idx="3">Practice This</button>
+            </div>
+          </div>
+
+          <div class="preview-card" data-idx="4">
+            <div class="preview-badge">#5 PANDA B</div>
+            <img src="assets/challenges/challenge_5_panda.png" alt="Challenge 5: Panda B">
+            <div class="preview-info">
+              <span class="preview-target">Target: <strong>panda</strong></span>
+              <span class="preview-sol">Answers: Tile 2, 7, 8</span>
+              <button class="btn-select-challenge" data-idx="4">Practice This</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer-actions">
+          <button class="btn-primary" id="btnDoneModal">Close & Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Open on iPhone / Mobile via QR Code or Live Link -->
+  <div class="modal-backdrop" id="phoneModalBackdrop">
+    <div class="modal-dialog phone-dialog">
+      <div class="modal-header">
+        <h3>📱 Practice on your iPhone</h3>
+        <button class="modal-close-btn" id="btnClosePhoneModal">&times;</button>
+      </div>
+
+      <div class="modal-body text-center">
+        <p class="modal-desc">
+          Scan the QR code with your iPhone Camera or tap the live link to open:
+        </p>
+
+        <!-- QR Code Container -->
+        <div class="qr-code-box">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://role-rolls-evaluated-include.trycloudflare.com" alt="Scan with iPhone Camera" class="qr-image" id="qrImage">
+          <div class="qr-scan-badge">Scan with iPhone Camera</div>
+        </div>
+
+        <!-- Live Links Section -->
+        <div class="live-link-card">
+          <div class="link-label">🌐 Live Public HTTPS Link (Cloudflare Edge / Fast & Secure):</div>
+          <div class="link-input-group">
+            <input type="text" readonly value="https://role-rolls-evaluated-include.trycloudflare.com" id="publicLiveUrlInput" class="link-input">
+            <button class="btn-copy" id="btnCopyPublicLink" title="Copy to clipboard">Copy</button>
+          </div>
+        </div>
+
+        <div class="live-link-card subtle">
+          <div class="link-label">📶 Local Wi-Fi Link (Same Wi-Fi Router):</div>
+          <div class="link-input-group">
+            <input type="text" readonly value="http://192.168.0.103:3000" id="localWifiUrlInput" class="link-input">
+            <button class="btn-copy" id="btnCopyWifiLink" title="Copy to clipboard">Copy</button>
+          </div>
+        </div>
+
+        <!-- iPhone Safari Tip -->
+        <div class="iphone-tips-card">
+          <span class="tip-icon">💡</span>
+          <div class="tip-text">
+            <strong>iPhone Safari Pro Tip:</strong> In Safari, tap the <strong>Share button (↑)</strong> and select <strong>"Add to Home Screen"</strong> to run it as a full-screen app like Binance!
+          </div>
+        </div>
+
+        <div class="modal-footer-actions">
+          <button class="btn-primary" id="btnDonePhoneModal">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
