@@ -3,3 +3,7 @@ node_modules/
 *.log
 *.zip
 *.bat
+server.js
+measure.ps1
+package.json
+
