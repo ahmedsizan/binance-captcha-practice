@@ -7,42 +7,215 @@
 (function () {
   'use strict';
 
-  // --- 5 Authentic Challenges from User's Screenshots ---
+  // --- 26 Authentic Challenges from User's Screenshots (De-duplicated) ---
   const CHALLENGES = [
     {
       id: 0,
       keyword: 'panda',
-      title: 'Challenge 1 of 5 (panda A)',
+      title: 'Picture 1 of 26 (panda A)',
+      badge: '#1 PANDA A',
       imageSrc: 'assets/challenges/challenge_1_panda.png',
-      correctIndices: [1, 3, 4] // Tiles: Top-mid (panda), Mid-left (panda), Center (panda)
+      correctIndices: [1, 3, 4]
     },
     {
       id: 1,
       keyword: 'elephant',
-      title: 'Challenge 2 of 5 (elephant A)',
+      title: 'Picture 2 of 26 (elephant A)',
+      badge: '#2 ELEPHANT A',
       imageSrc: 'assets/challenges/challenge_2_elephant.jpg',
-      correctIndices: [2, 5, 6, 7] // Tiles: Top-right, Mid-right, Bottom-left, Bottom-mid
+      correctIndices: [2, 5, 6, 7]
     },
     {
       id: 2,
       keyword: 'bicycle',
-      title: 'Challenge 3 of 5 (bicycle)',
+      title: 'Picture 3 of 26 (bicycle A)',
+      badge: '#3 BICYCLE A',
       imageSrc: 'assets/challenges/challenge_3_bicycle.png',
-      correctIndices: [1, 2, 7] // Tiles: Top-mid, Top-right, Bottom-mid
+      correctIndices: [1, 2, 7]
     },
     {
       id: 3,
       keyword: 'elephant',
-      title: 'Challenge 4 of 5 (elephant B)',
+      title: 'Picture 4 of 26 (elephant B)',
+      badge: '#4 ELEPHANT B',
       imageSrc: 'assets/challenges/challenge_4_elephant.jpg',
-      correctIndices: [1, 2, 8] // Tiles: Top-mid, Top-right, Bottom-right
+      correctIndices: [1, 2, 8]
     },
     {
       id: 4,
       keyword: 'panda',
-      title: 'Challenge 5 of 5 (panda B)',
+      title: 'Picture 5 of 26 (panda B)',
+      badge: '#5 PANDA B',
       imageSrc: 'assets/challenges/challenge_5_panda.png',
-      correctIndices: [1, 6, 7] // Tiles: Top-mid (panda), Bottom-left (panda), Bottom-mid (panda)
+      correctIndices: [1, 6, 7]
+    },
+    {
+      id: 5,
+      keyword: 'bicycle',
+      title: 'Picture 6 of 26 (bicycle B)',
+      badge: '#6 BICYCLE B',
+      imageSrc: 'assets/challenges/challenge_6_bicycle.jpg',
+      correctIndices: [0, 4, 5]
+    },
+    {
+      id: 6,
+      keyword: 'airplane',
+      title: 'Picture 7 of 26 (airplane)',
+      badge: '#7 AIRPLANE',
+      imageSrc: 'assets/challenges/challenge_7_airplane.jpg',
+      correctIndices: [0, 3, 8]
+    },
+    {
+      id: 7,
+      keyword: 'calculator',
+      title: 'Picture 8 of 26 (calculator A)',
+      badge: '#8 CALCULATOR A',
+      imageSrc: 'assets/challenges/challenge_8_calculator.jpg',
+      correctIndices: [1, 5, 6]
+    },
+    {
+      id: 8,
+      keyword: 'pencil',
+      title: 'Picture 9 of 26 (pencil)',
+      badge: '#9 PENCIL',
+      imageSrc: 'assets/challenges/challenge_9_pencil.jpg',
+      correctIndices: [0, 1, 3, 4, 7, 8]
+    },
+    {
+      id: 9,
+      keyword: 'scissors',
+      title: 'Picture 10 of 26 (scissors A)',
+      badge: '#10 SCISSORS A',
+      imageSrc: 'assets/challenges/challenge_10_scissors.jpg',
+      correctIndices: [1, 2, 3, 5, 8]
+    },
+    {
+      id: 10,
+      keyword: 'notebook',
+      title: 'Picture 11 of 26 (notebook A)',
+      badge: '#11 NOTEBOOK A',
+      imageSrc: 'assets/challenges/challenge_11_notebook.jpg',
+      correctIndices: [0, 4, 7]
+    },
+    {
+      id: 11,
+      keyword: 'calculator',
+      title: 'Picture 12 of 26 (calculator B)',
+      badge: '#12 CALCULATOR B',
+      imageSrc: 'assets/challenges/challenge_12_calculator.jpg',
+      correctIndices: [1, 3, 5, 7, 8]
+    },
+    {
+      id: 12,
+      keyword: 'scissors',
+      title: 'Picture 13 of 26 (scissors B)',
+      badge: '#13 SCISSORS B',
+      imageSrc: 'assets/challenges/challenge_13_scissors.jpg',
+      correctIndices: [1, 2, 4, 5, 6, 7, 8]
+    },
+    {
+      id: 13,
+      keyword: 'calculator',
+      title: 'Picture 14 of 26 (calculator C)',
+      badge: '#14 CALCULATOR C',
+      imageSrc: 'assets/challenges/challenge_14_calculator.jpg',
+      correctIndices: [2, 3, 5, 7, 8]
+    },
+    {
+      id: 14,
+      keyword: 'scissors',
+      title: 'Picture 15 of 26 (scissors C)',
+      badge: '#15 SCISSORS C',
+      imageSrc: 'assets/challenges/challenge_15_scissors.jpg',
+      correctIndices: [0, 1, 2, 3, 4, 5, 6, 7]
+    },
+    {
+      id: 15,
+      keyword: 'notebook',
+      title: 'Picture 16 of 26 (notebook B)',
+      badge: '#16 NOTEBOOK B',
+      imageSrc: 'assets/challenges/challenge_16_notebook.jpg',
+      correctIndices: [3, 4, 6, 7, 8]
+    },
+    {
+      id: 16,
+      keyword: 'calculator',
+      title: 'Picture 17 of 26 (calculator D)',
+      badge: '#17 CALCULATOR D',
+      imageSrc: 'assets/challenges/challenge_17_calculator.jpg',
+      correctIndices: [0, 1, 2, 3, 5, 6, 7]
+    },
+    {
+      id: 17,
+      keyword: 'notebook',
+      title: 'Picture 18 of 26 (notebook C)',
+      badge: '#18 NOTEBOOK C',
+      imageSrc: 'assets/challenges/challenge_18_notebook.jpg',
+      correctIndices: [2, 4, 6]
+    },
+    {
+      id: 18,
+      keyword: 'notebook',
+      title: 'Picture 19 of 26 (notebook D)',
+      badge: '#19 NOTEBOOK D',
+      imageSrc: 'assets/challenges/challenge_19_notebook.jpg',
+      correctIndices: [3, 6, 7]
+    },
+    {
+      id: 19,
+      keyword: 'notebook',
+      title: 'Picture 20 of 26 (notebook E)',
+      badge: '#20 NOTEBOOK E',
+      imageSrc: 'assets/challenges/challenge_20_notebook.jpg',
+      correctIndices: [1, 4, 5, 7, 8]
+    },
+    {
+      id: 20,
+      keyword: 'notebook',
+      title: 'Picture 21 of 26 (notebook F)',
+      badge: '#21 NOTEBOOK F',
+      imageSrc: 'assets/challenges/challenge_21_notebook.jpg',
+      correctIndices: [3, 4]
+    },
+    {
+      id: 21,
+      keyword: 'panda',
+      title: 'Picture 22 of 26 (panda C)',
+      badge: '#22 PANDA C',
+      imageSrc: 'assets/challenges/challenge_22_panda.png',
+      correctIndices: [0, 2, 3, 8]
+    },
+    {
+      id: 22,
+      keyword: 'panda',
+      title: 'Picture 23 of 26 (panda D)',
+      badge: '#23 PANDA D',
+      imageSrc: 'assets/challenges/challenge_23_panda.png',
+      correctIndices: [2, 5, 7]
+    },
+    {
+      id: 23,
+      keyword: 'car',
+      title: 'Picture 24 of 26 (car)',
+      badge: '#24 CAR',
+      imageSrc: 'assets/challenges/challenge_24_car.png',
+      correctIndices: [1, 7]
+    },
+    {
+      id: 24,
+      keyword: 'elephant',
+      title: 'Picture 25 of 26 (elephant C)',
+      badge: '#25 ELEPHANT C',
+      imageSrc: 'assets/challenges/challenge_25_elephant.png',
+      correctIndices: [5, 8]
+    },
+    {
+      id: 25,
+      keyword: 'bicycle',
+      title: 'Picture 26 of 26 (bicycle C)',
+      badge: '#26 BICYCLE C',
+      imageSrc: 'assets/challenges/challenge_26_bicycle.png',
+      correctIndices: [0, 2, 3, 4, 5]
     }
   ];
 
@@ -268,9 +441,15 @@
     DOM.challengeIndicator.textContent = challenge.title;
 
     // Update active tab chip
-    DOM.tabChips.forEach(chip => {
-      chip.classList.toggle('active', parseInt(chip.dataset.challenge, 10) === index);
-    });
+    if (DOM.tabChips) {
+      DOM.tabChips.forEach(chip => {
+        const isActive = parseInt(chip.dataset.challenge, 10) === index;
+        chip.classList.toggle('active', isActive);
+        if (isActive) {
+          chip.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+      });
+    }
 
     // Start 10-second round
     startRound();
@@ -601,6 +780,56 @@
     });
   }
 
+  // --- Render Dynamic Challenge Tabs & Modal Grid ---
+  function renderDynamicChallengeUI() {
+    // 1. Practice Tab Chips
+    const tabsContainer = document.getElementById('challengeTabsBar');
+    if (tabsContainer) {
+      tabsContainer.innerHTML = `
+        <span class="tabs-label">Practice (${CHALLENGES.length}):</span>
+        ${CHALLENGES.map((c, i) => `
+          <button class="tab-chip ${i === 0 ? 'active' : ''}" data-challenge="${i}" title="${c.title}">
+            #${i + 1} ${c.keyword.charAt(0).toUpperCase() + c.keyword.slice(1)}
+          </button>
+        `).join('')}
+      `;
+      DOM.tabChips = tabsContainer.querySelectorAll('.tab-chip');
+      DOM.tabChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          const challengeIdx = parseInt(chip.dataset.challenge, 10);
+          loadChallenge(challengeIdx);
+        });
+      });
+    }
+
+    // 2. Modal Previews Grid
+    const previewGrid = document.getElementById('challengePreviewsGrid');
+    if (previewGrid) {
+      previewGrid.innerHTML = CHALLENGES.map((c, i) => `
+        <div class="preview-card" data-idx="${i}">
+          <div class="preview-badge">${c.badge}</div>
+          <img src="${c.imageSrc}" alt="${c.title}" loading="lazy">
+          <div class="preview-info">
+            <span class="preview-target">Target: <strong>${c.keyword}</strong></span>
+            <span class="preview-sol">Answers: Tile ${c.correctIndices.map(x => x + 1).join(', ')}</span>
+            <button class="btn-select-challenge" data-idx="${i}">Practice This</button>
+          </div>
+        </div>
+      `).join('');
+
+      const selectBtns = previewGrid.querySelectorAll('.btn-select-challenge');
+      selectBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const idx = parseInt(btn.dataset.idx, 10);
+          if (DOM.imgModalBackdrop) {
+            DOM.imgModalBackdrop.classList.remove('open');
+          }
+          loadChallenge(idx);
+        });
+      });
+    }
+  }
+
   // --- Event Listeners Setup ---
   function setupEventListeners() {
     // 3x3 Grid Cells
@@ -629,14 +858,6 @@
       e.stopPropagation();
       state.selectedIndices.clear();
       DOM.gridCells.forEach(cell => cell.classList.remove('selected'));
-    });
-
-    // Challenge Tab Chips
-    DOM.tabChips.forEach(chip => {
-      chip.addEventListener('click', () => {
-        const challengeIdx = parseInt(chip.dataset.challenge, 10);
-        loadChallenge(challengeIdx);
-      });
     });
 
     // Sound Toggle
@@ -688,16 +909,6 @@
       if (e.target === DOM.imgModalBackdrop) {
         DOM.imgModalBackdrop.classList.remove('open');
       }
-    });
-
-    // Modal challenge selection buttons
-    const selectBtns = document.querySelectorAll('.btn-select-challenge');
-    selectBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const idx = parseInt(btn.dataset.idx, 10);
-        DOM.imgModalBackdrop.classList.remove('open');
-        loadChallenge(idx);
-      });
     });
 
     // Phone Modal Handlers
@@ -765,6 +976,7 @@
   // --- Bootstrap ---
   function init() {
     loadSavedStats();
+    renderDynamicChallengeUI();
     setupEventListeners();
     setupKeyboard();
 

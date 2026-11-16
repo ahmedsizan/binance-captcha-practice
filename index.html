@@ -33,11 +33,11 @@
         <button id="btnOpenPhoneModal" class="nav-btn highlight" title="Open on iPhone / Mobile via QR or Live Link">
           <span>📱 Open on iPhone</span>
         </button>
-        <button id="btnOpenImgModal" class="nav-btn" title="View & Switch 5 Pictures">
+        <button id="btnOpenImgModal" class="nav-btn" title="View & Switch 26 Pictures">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
             <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-1.96-2.36L6.5 17h11l-3.54-4.71z"/>
           </svg>
-          <span>5 Challenge Pictures</span>
+          <span id="navChallengeCount">26 Challenge Pictures</span>
         </button>
         <button id="btnSoundToggle" class="nav-btn icon-only" title="Toggle Sound">
           <span id="soundIcon">🔊</span>
@@ -142,13 +142,8 @@
       </section>
 
       <!-- Quick Challenge Switcher Bar -->
-      <div class="challenge-tabs-bar">
+      <div class="challenge-tabs-bar" id="challengeTabsBar">
         <span class="tabs-label">Practice Challenge:</span>
-        <button class="tab-chip active" data-challenge="0">#1 Panda A</button>
-        <button class="tab-chip" data-challenge="1">#2 Elephant A</button>
-        <button class="tab-chip" data-challenge="2">#3 Bicycle</button>
-        <button class="tab-chip" data-challenge="3">#4 Elephant B</button>
-        <button class="tab-chip" data-challenge="4">#5 Panda B</button>
       </div>
 
       <!-- Helper Keyboard Shortcuts Hint -->
@@ -222,71 +217,21 @@
     </aside>
   </main>
 
-  <!-- Modal: View 4 Challenge Pictures -->
+  <!-- Modal: View Challenge Pictures -->
   <div class="modal-backdrop" id="imgModalBackdrop">
     <div class="modal-dialog">
       <div class="modal-header">
-        <h3>The 5 Binance Challenge Pictures</h3>
+        <h3 id="modalHeaderTitle">All 26 Authentic Binance Challenge Pictures</h3>
         <button class="modal-close-btn" id="btnCloseImgModal">&times;</button>
       </div>
 
       <div class="modal-body">
         <p class="modal-desc">
-          Your 5 exact challenge screenshots are loaded! The app continuously cycles through them every <strong>10 seconds</strong>:
+          All 26 authentic challenge screenshots loaded! Click any picture to practice it directly, or let the app continuously cycle every <strong>10 seconds</strong>:
         </p>
 
-        <!-- 5 Challenge Preview Cards -->
-        <div class="challenge-previews-grid">
-          <div class="preview-card" data-idx="0">
-            <div class="preview-badge">#1 PANDA A</div>
-            <img src="assets/challenges/challenge_1_panda.png" alt="Challenge 1: Panda A">
-            <div class="preview-info">
-              <span class="preview-target">Target: <strong>panda</strong></span>
-              <span class="preview-sol">Answers: Tile 2, 4, 5</span>
-              <button class="btn-select-challenge" data-idx="0">Practice This</button>
-            </div>
-          </div>
-
-          <div class="preview-card" data-idx="1">
-            <div class="preview-badge">#2 ELEPHANT A</div>
-            <img src="assets/challenges/challenge_2_elephant.jpg" alt="Challenge 2: Elephant A">
-            <div class="preview-info">
-              <span class="preview-target">Target: <strong>elephant</strong></span>
-              <span class="preview-sol">Answers: Tile 3, 6, 7, 8</span>
-              <button class="btn-select-challenge" data-idx="1">Practice This</button>
-            </div>
-          </div>
-
-          <div class="preview-card" data-idx="2">
-            <div class="preview-badge">#3 BICYCLE</div>
-            <img src="assets/challenges/challenge_3_bicycle.png" alt="Challenge 3: Bicycle">
-            <div class="preview-info">
-              <span class="preview-target">Target: <strong>bicycle</strong></span>
-              <span class="preview-sol">Answers: Tile 2, 3, 8</span>
-              <button class="btn-select-challenge" data-idx="2">Practice This</button>
-            </div>
-          </div>
-
-          <div class="preview-card" data-idx="3">
-            <div class="preview-badge">#4 ELEPHANT B</div>
-            <img src="assets/challenges/challenge_4_elephant.jpg" alt="Challenge 4: Elephant B">
-            <div class="preview-info">
-              <span class="preview-target">Target: <strong>elephant</strong></span>
-              <span class="preview-sol">Answers: Tile 2, 3, 9</span>
-              <button class="btn-select-challenge" data-idx="3">Practice This</button>
-            </div>
-          </div>
-
-          <div class="preview-card" data-idx="4">
-            <div class="preview-badge">#5 PANDA B</div>
-            <img src="assets/challenges/challenge_5_panda.png" alt="Challenge 5: Panda B">
-            <div class="preview-info">
-              <span class="preview-target">Target: <strong>panda</strong></span>
-              <span class="preview-sol">Answers: Tile 2, 7, 8</span>
-              <button class="btn-select-challenge" data-idx="4">Practice This</button>
-            </div>
-          </div>
-        </div>
+        <!-- Dynamic Challenge Preview Cards Grid -->
+        <div class="challenge-previews-grid" id="challengePreviewsGrid"></div>
 
         <div class="modal-footer-actions">
           <button class="btn-primary" id="btnDoneModal">Close & Continue</button>
