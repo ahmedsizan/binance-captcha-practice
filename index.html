@@ -2,291 +2,339 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="theme-color" content="#181A20">
-  <title>Binance Security Verification | Image Selection CAPTCHA Trainer</title>
-  <meta name="description" content="Authentic Binance 3x3 Image Selection CAPTCHA practice trainer with 10-second auto-cycle, millisecond speed tracking, and 5 authentic challenge pictures.">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#F8F9FA">
+  <title>Binance Airdrop & CAPTCHA Speedrun</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Top Navigation Bar -->
-  <header class="binance-navbar">
-    <div class="nav-container">
-      <div class="brand">
-        <svg class="binance-logo-svg" viewBox="0 0 120 24" width="120" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12.002 0L6.47 5.534l2.583 2.583L12.002 5.17l2.949 2.948 2.583-2.584L12.002 0zm-7.067 7.068L0 12.002l4.935 4.934 2.584-2.583-2.351-2.351 2.351-2.351-2.584-2.584zm14.134 0l-2.584 2.584 2.351 2.351-2.351 2.351 2.584 2.583 4.935-4.934-4.935-4.934zM12.002 8.706L8.707 12.002l3.295 3.295 3.295-3.295-3.295-3.296zm-7.067 10.36L2.35 16.482 0 18.833l4.935 4.935 7.067-7.067-2.584-2.583-4.483 4.948zm14.134 0l-4.483-4.948-2.584 2.583 7.067 7.067 4.935-4.935-2.351-2.351-2.584 2.584z" fill="#F0B90B"/>
-          <text x="32" y="17" fill="#EAECEF" font-family="'IBM Plex Sans', sans-serif" font-weight="700" font-size="15" letter-spacing="1">BINANCE</text>
+  <!-- App Shell: Mobile First Container (100% phone viewport optimized) -->
+  <div class="mobile-container">
+    
+    <!-- Phone Top Status Bar (Authentic iOS/Android look) -->
+    <div class="phone-status-bar">
+      <span class="status-time" id="deviceClock">5:00</span>
+      <div class="status-notch"></div>
+      <div class="status-icons">
+        <span class="signal-icon">4G</span>
+        <svg class="battery-icon" viewBox="0 0 24 12" width="22" height="11" fill="currentColor">
+          <rect x="1" y="1" width="19" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <rect x="3" y="3" width="14" height="6" rx="1" fill="currentColor"/>
+          <path d="M21 4.5v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
-        <span class="nav-badge">IMAGE CAPTCHA TRAINER</span>
-      </div>
-
-      <div class="nav-actions">
-        <div class="status-indicator">
-          <span class="pulse-dot"></span>
-          <span id="navTimerStatus">10s Auto-Cycle: ON</span>
-        </div>
-        <button id="btnOpenPhoneModal" class="nav-btn highlight" title="Open on iPhone / Mobile via QR or Live Link">
-          <span>📱 Open on iPhone</span>
-        </button>
-        <button id="btnOpenImgModal" class="nav-btn" title="View & Switch 26 Pictures">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-1.96-2.36L6.5 17h11l-3.54-4.71z"/>
-          </svg>
-          <span id="navChallengeCount">26 Challenge Pictures</span>
-        </button>
-        <button id="btnSoundToggle" class="nav-btn icon-only" title="Toggle Sound">
-          <span id="soundIcon">🔊</span>
-        </button>
       </div>
     </div>
-  </header>
 
-  <!-- Main Workspace -->
-  <main class="main-wrapper">
-    <!-- Left Column: The Authentic Binance CAPTCHA Dialog -->
-    <div class="verification-center">
+    <!-- Binance In-App Top Navigation Bar -->
+    <header class="app-header">
+      <button class="header-icon-btn" id="btnHeaderBack" title="Back" aria-label="Back">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+
+      <h1 class="header-title">Airdrop</h1>
+
+      <div class="header-actions">
+        <button class="header-pill-btn" id="btnHeaderMore" title="Gallery & Options">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="header-divider"></span>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- UID & Mode Switcher Bar -->
+    <div class="sub-nav-bar">
+      <div class="uid-display">
+        <span>UID: 1277971426</span>
+      </div>
+      <div class="mode-toggles">
+        <button class="mode-chip active" id="btnModeCountdown" title="3-Second Airdrop Countdown Mode">3s Countdown</button>
+        <button class="mode-chip" id="btnModeInstant" title="Instant Random CAPTCHA Practice">Rapid Mode</button>
+      </div>
+    </div>
+
+    <!-- Main Scrollable Airdrop Page Content -->
+    <main class="page-content">
       
-      <!-- Binance Security Verification Modal Card -->
-      <section class="binance-captcha-card" id="captchaCard" aria-label="Security Verification Dialog">
+      <!-- Card 1: ACTIVE / UPCOMING AIRDROP CARD (Exact Binance Design) -->
+      <section class="airdrop-card active-card" id="activeAirdropCard">
         
-        <!-- 10-Second Countdown Progress Bar -->
-        <div class="timer-bar-container">
-          <div class="timer-bar-fill" id="timerBarFill"></div>
-          <div class="timer-bar-info">
-            <span class="timer-label">Next CAPTCHA in:</span>
-            <span class="timer-countdown" id="timerCountdown">10.0s</span>
+        <!-- Coin Header Row -->
+        <div class="card-top-row">
+          <div class="coin-brand">
+            <!-- Unknown Coin Icon (Hidden Name per Instruction) -->
+            <div class="coin-avatar unknown-avatar">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="#F0B90B">
+                <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z"/>
+              </svg>
+            </div>
+            <div class="coin-title-group">
+              <h2 class="coin-name" id="coinNameDisplay">To Be Revealed</h2>
+              <span class="coin-sub" id="coinSubDisplay">Project Alpha</span>
+            </div>
+          </div>
+
+          <div class="status-badge upcoming" id="airdropStatusBadge">
+            <span class="badge-dot"></span>
+            <span id="badgeText">Upcoming</span>
           </div>
         </div>
 
-        <!-- The Image-Selection CAPTCHA Stage -->
-        <div class="captcha-stage-container" id="stageContainer">
-          
-          <!-- Challenge Header (rendered from prompt) -->
-          <div class="captcha-stage-header">
-            <p class="prompt-subtext">Please select all images with</p>
-            <h1 class="prompt-keyword" id="promptKeyword">panda</h1>
+        <!-- Claim Stats Row -->
+        <div class="claim-stats-grid">
+          <div class="stat-col">
+            <span class="stat-label">Claim amount</span>
+            <span class="stat-val amount-val" id="claimAmountDisplay">???</span>
+          </div>
+          <div class="stat-col">
+            <span class="stat-label">Claim cost</span>
+            <span class="stat-val cost-val">15 Points</span>
+          </div>
+        </div>
+
+        <!-- Airdrop Stages Section -->
+        <div class="airdrop-stages-box">
+          <div class="stages-title">Airdrop stages</div>
+
+          <!-- Stage 1 -->
+          <div class="stage-row">
+            <span class="stage-tag-icon">⚡</span>
+            <span class="stage-tag-text">First Come, First Served</span>
           </div>
 
-          <!-- 3x3 Grid Wrapper with the authentic user image background -->
-          <div class="captcha-grid-wrapper" id="gridWrapper">
-            <img src="assets/challenges/challenge_1_panda.png" alt="Captcha Challenge" class="captcha-raw-img" id="captchaRawImg">
+          <!-- Stage 2: Countdown Timer Stage -->
+          <div class="stage-row stage-countdown-row">
+            <div class="points-badge">
+              <span>250 Points</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="#03A66D">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
             
-            <!-- Interactive 3x3 Clickable Hotspot Grid Overlay -->
-            <div class="interactive-grid-overlay" id="interactiveGrid">
-              <div class="grid-cell" data-index="0" title="Tile 1 [Press 1 or Q]">
-                <div class="cell-check-badge">✓</div>
-              </div>
-              <div class="grid-cell" data-index="1" title="Tile 2 [Press 2 or W]">
-                <div class="cell-check-badge">✓</div>
-              </div>
-              <div class="grid-cell" data-index="2" title="Tile 3 [Press 3 or E]">
-                <div class="cell-check-badge">✓</div>
-              </div>
-              <div class="grid-cell" data-index="3" title="Tile 4 [Press 4 or A]">
-                <div class="cell-check-badge">✓</div>
-              </div>
-              <div class="grid-cell" data-index="4" title="Tile 5 [Press 5 or S]">
-                <div class="cell-check-badge">✓</div>
-              </div>
-              <div class="grid-cell" data-index="5" title="Tile 6 [Press 6 or D]">
-                <div class="cell-check-badge">✓</div>
-              </div>
-              <div class="grid-cell" data-index="6" title="Tile 7 [Press 7 or Z]">
-                <div class="cell-check-badge">✓</div>
-              </div>
-              <div class="grid-cell" data-index="7" title="Tile 8 [Press 8 or X]">
-                <div class="cell-check-badge">✓</div>
-              </div>
-              <div class="grid-cell" data-index="8" title="Tile 9 [Press 9 or C]">
-                <div class="cell-check-badge">✓</div>
-              </div>
+            <div class="starts-in-pill" id="startsInContainer">
+              <span class="starts-in-label" id="startsInLabel">Starts in</span>
+              <span class="starts-in-time" id="countdownDisplay">00H : 00M : 03S</span>
             </div>
+          </div>
 
-            <!-- Interactive Hotspot Buttons Overlay at bottom (Close, Refresh, Verify) -->
-            <div class="bottom-controls-overlay">
-              <button class="hotspot-btn btn-close-hotspot" id="btnCloseHotspot" title="Reset Challenge"></button>
-              <button class="hotspot-btn btn-refresh-hotspot" id="btnRefreshHotspot" title="Load Next Challenge"></button>
-              <button class="hotspot-btn btn-verify-hotspot" id="btnVerifyHotspot" title="Verify Selection [Press Enter / Space]">
-                <span class="btn-verify-text">Verify</span>
-              </button>
-            </div>
-
-            <!-- Feedback Message Overlay (Success / Fail / Timeout) -->
-            <div class="status-banner" id="statusBanner">
-              <div class="status-icon" id="statusIcon">✓</div>
-              <div class="status-text-wrap">
-                <span class="status-title" id="statusTitle">Verification Success</span>
-                <span class="status-desc" id="statusDesc">Completed in 1.42s!</span>
-              </div>
+          <!-- Stage 3: Risk Pre-Check -->
+          <div class="stage-row">
+            <div class="risk-check-pill">
+              <span>Risk Pre-Check</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="#03A66D">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
             </div>
           </div>
         </div>
 
-        <!-- Live Stopwatch & Current Challenge Indicator -->
-        <div class="card-footer-bar">
-          <div class="footer-left">
-            <span class="challenge-indicator" id="challengeIndicator">Picture 1 of 5 (panda A)</span>
-          </div>
-          <div class="footer-right">
-            <div class="live-stopwatch">
-              <span class="stopwatch-dot"></span>
-              <span id="liveTimeDisplay">0.00s</span>
-            </div>
-          </div>
+        <!-- Primary Claim Action Button -->
+        <div class="claim-action-wrap">
+          <button class="btn-claim-primary disabled" id="btnClaimAction">
+            <span id="btnClaimText">Claim</span>
+          </button>
         </div>
       </section>
 
-      <!-- Quick Challenge Switcher Bar -->
-      <div class="challenge-tabs-bar" id="challengeTabsBar">
-        <span class="tabs-label">Practice Challenge:</span>
+      <!-- Card 2: CAPTCHA SOLVE TIME & PERFORMANCE (Area marked by user) -->
+      <section class="airdrop-card solve-time-card" id="solveTimeCard">
+        <div class="card-top-row">
+          <div class="coin-brand">
+            <div class="coin-avatar solve-avatar">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="#F0B90B">
+                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+              </svg>
+            </div>
+            <div class="coin-title-group">
+              <h3 class="coin-name" id="cardSolveTitle">Solve Time</h3>
+              <span class="coin-sub">Captcha Speedrun Tracker</span>
+            </div>
+          </div>
+          <div class="status-badge record-badge" id="cardRecordBadge">
+            <span id="cardBadgeText">Live Record</span>
+          </div>
+        </div>
+
+        <div class="claim-stats-grid">
+          <div class="stat-col">
+            <span class="stat-label">Last solve time</span>
+            <span class="stat-val amount-val highlight-solve-time" id="cardLastSolveTime">-- s</span>
+          </div>
+          <div class="stat-col">
+            <span class="stat-label">Best record</span>
+            <span class="stat-val cost-val" id="cardBestSolveTime">-- s</span>
+          </div>
+        </div>
+
+        <div class="airdrop-stages-box">
+          <div class="stage-row">
+            <span class="stage-tag-icon">⚡</span>
+            <span class="stage-tag-text" id="cardSpeedRating">Solve a captcha to see rating</span>
+          </div>
+          <div class="stage-row">
+            <div class="points-badge">
+              <span id="cardAvgSpeed">Avg: -- s</span>
+            </div>
+            <span class="ended-date-text" id="cardTotalSolvedText">Solved: 0 / 26</span>
+          </div>
+        </div>
+
+        <div class="claim-action-wrap">
+          <button class="btn-claim-primary speedrun-action-btn" id="btnQuickPractice">
+            <span id="btnQuickPracticeText">Practice Next Round ⚡</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom Navigation Bar (Authentic App View) -->
+    <footer class="app-bottom-bar">
+      <div class="nav-tab active">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M12 2L2 12h3v8h6v-6h2v6h6v-8h3L12 2z"/>
+        </svg>
+        <span>Airdrop</span>
+      </div>
+      <div class="nav-tab" id="btnRestartRound">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+        </svg>
+        <span>Next 3s</span>
+      </div>
+      <div class="nav-tab" id="btnOpenGalleryModal">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+          <circle cx="8.5" cy="8.5" r="1.5"/>
+          <polyline points="21 15 16 10 5 21"/>
+        </svg>
+        <span>All 26</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- MODAL 1: "REVIEW YOUR CLAIM" BOTTOM SHEET (Video 00:05)  -->
+  <!-- ======================================================== -->
+  <div class="bottom-sheet-backdrop" id="reviewSheetBackdrop">
+    <div class="bottom-sheet-dialog" id="reviewSheetDialog">
+      <div class="sheet-drag-handle"></div>
+      
+      <h3 class="sheet-title">Review your claim</h3>
+      <p class="sheet-desc">
+        Alpha Points will be deducted from your total points to participate in this activity.
+      </p>
+
+      <div class="sheet-details-card">
+        <div class="sheet-detail-row">
+          <span class="detail-name">My Alpha Points</span>
+          <span class="detail-value">256 Points</span>
+        </div>
+        <div class="sheet-detail-row">
+          <span class="detail-name">Claim cost</span>
+          <span class="detail-value">15 Points</span>
+        </div>
+        <div class="sheet-detail-row">
+          <span class="detail-name">Claimed to</span>
+          <span class="detail-value">Alpha Account</span>
+        </div>
+        <div class="sheet-detail-row">
+          <span class="detail-name">UID</span>
+          <span class="detail-value">1277971426</span>
+        </div>
       </div>
 
-      <!-- Helper Keyboard Shortcuts Hint -->
-      <div class="keyboard-hints-pill">
-        <span>⚡ <strong>Speedrun Keys:</strong> Numpad <strong>1-9</strong> (or <strong>QWE/ASD/ZXC</strong>) to select tiles • <strong>Enter/Space</strong> to Verify</span>
+      <div class="sheet-notice-box">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="#707A8A">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+        </svg>
+        <span>The alpha points will be deducted today and can be viewed in the alpha points breakdown tomorrow</span>
+      </div>
+
+      <div class="sheet-actions-row">
+        <button class="sheet-btn btn-cancel" id="btnCancelReview">Cancel</button>
+        <button class="sheet-btn btn-confirm-dots" id="btnConfirmReview">
+          <span class="btn-confirm-text">Confirm</span>
+          <span class="dots-animation">•••</span>
+        </button>
       </div>
     </div>
+  </div>
 
-    <!-- Right Column: Performance & Speedrun Stats Dashboard -->
-    <aside class="stats-sidebar">
-      <div class="stats-card">
-        <div class="stats-card-header">
-          <h2>SPEEDRUN METRICS</h2>
-          <button class="stats-reset-btn" id="btnResetStats" title="Reset stats">Reset</button>
-        </div>
-
-        <div class="stats-grid">
-          <!-- Last Result -->
-          <div class="stat-box highlight">
-            <div class="stat-meta">LAST TIME</div>
-            <div class="stat-value" id="statLastTime">--</div>
-            <div class="stat-sub" id="statLastSub">Ready for round 1</div>
-          </div>
-
-          <!-- Best Time -->
-          <div class="stat-box success">
-            <div class="stat-meta">BEST SPEED</div>
-            <div class="stat-value" id="statBestTime">--</div>
-            <div class="stat-sub" id="statBestSub">Target: &lt; 1.50s</div>
-          </div>
-
-          <!-- Average Solve Time -->
-          <div class="stat-box">
-            <div class="stat-meta">AVG TIME</div>
-            <div class="stat-value" id="statAvgTime">--</div>
-            <div class="stat-sub" id="statAvgSub">Over successful</div>
-          </div>
-
-          <!-- Accuracy Rate -->
-          <div class="stat-box">
-            <div class="stat-meta">ACCURACY</div>
-            <div class="stat-value" id="statAccuracy">0%</div>
-            <div class="stat-sub" id="statRoundsPlayed">0 / 0 Solved</div>
-          </div>
-        </div>
-
-        <!-- Binance Benchmark Rank -->
-        <div class="speed-benchmark-box">
-          <div class="benchmark-header">
-            <span>Speedrun Rating</span>
-            <span class="rank-badge" id="rankBadge">ROOKIE</span>
-          </div>
-          <div class="benchmark-progress">
-            <div class="benchmark-fill" id="benchmarkFill" style="width: 20%;"></div>
-          </div>
-          <div class="benchmark-labels">
-            <span>&gt;4.0s (Slow)</span>
-            <span>2.5s (Average)</span>
-            <span>&lt;1.2s (Godlike)</span>
-          </div>
-        </div>
-
-        <!-- Live History Log -->
-        <div class="history-section">
-          <h3>RECENT ATTEMPTS</h3>
-          <div class="history-list" id="historyList">
-            <div class="history-empty">Solve a CAPTCHA to record history</div>
-          </div>
-        </div>
-      </div>
-    </aside>
-  </main>
-
-  <!-- Modal: View Challenge Pictures -->
-  <div class="modal-backdrop" id="imgModalBackdrop">
-    <div class="modal-dialog">
-      <div class="modal-header">
-        <h3 id="modalHeaderTitle">All 26 Authentic Binance Challenge Pictures</h3>
-        <button class="modal-close-btn" id="btnCloseImgModal">&times;</button>
+  <!-- ======================================================== -->
+  <!-- MODAL 2: AUTHENTIC BINANCE SECURITY CAPTCHA (Video 00:06)-->
+  <!-- ======================================================== -->
+  <div class="captcha-modal-backdrop" id="captchaBackdrop">
+    <div class="captcha-modal-card" id="captchaModalCard">
+      
+      <!-- Brief Loading Spinner Screen (authenticity flash) -->
+      <div class="captcha-loading-overlay" id="captchaLoadingOverlay">
+        <div class="binance-spinner"></div>
+        <span>Loading</span>
       </div>
 
-      <div class="modal-body">
-        <p class="modal-desc">
-          All 26 authentic challenge screenshots loaded! Click any picture to practice it directly, or let the app continuously cycle every <strong>10 seconds</strong>:
-        </p>
+      <!-- The Authentic Binance CAPTCHA Viewport -->
+      <div class="captcha-viewport" id="captchaViewport">
+        <img src="assets/challenges/challenge_1_panda.png" alt="Binance Security Verification" class="captcha-img" id="captchaImg">
 
-        <!-- Dynamic Challenge Preview Cards Grid -->
-        <div class="challenge-previews-grid" id="challengePreviewsGrid"></div>
+        <!-- 3x3 Clickable Tile Hotspot Overlay -->
+        <div class="interactive-grid-overlay" id="interactiveGrid">
+          <div class="grid-cell" data-index="0"><div class="cell-check-badge">✓</div></div>
+          <div class="grid-cell" data-index="1"><div class="cell-check-badge">✓</div></div>
+          <div class="grid-cell" data-index="2"><div class="cell-check-badge">✓</div></div>
+          <div class="grid-cell" data-index="3"><div class="cell-check-badge">✓</div></div>
+          <div class="grid-cell" data-index="4"><div class="cell-check-badge">✓</div></div>
+          <div class="grid-cell" data-index="5"><div class="cell-check-badge">✓</div></div>
+          <div class="grid-cell" data-index="6"><div class="cell-check-badge">✓</div></div>
+          <div class="grid-cell" data-index="7"><div class="cell-check-badge">✓</div></div>
+          <div class="grid-cell" data-index="8"><div class="cell-check-badge">✓</div></div>
+        </div>
 
-        <div class="modal-footer-actions">
-          <button class="btn-primary" id="btnDoneModal">Close & Continue</button>
+        <!-- Hotspot Buttons Overlay at bottom (Close ✕, Refresh ↺, Verify) -->
+        <div class="bottom-controls-overlay">
+          <button class="hotspot-btn btn-close-hotspot" id="btnCloseCaptcha" title="Cancel"></button>
+          <button class="hotspot-btn btn-refresh-hotspot" id="btnRefreshCaptcha" title="Next Random Challenge"></button>
+          <button class="hotspot-btn btn-verify-hotspot" id="btnVerifyCaptcha" title="Verify"></button>
+        </div>
+
+        <!-- Success Badge (Video Frame 00:09) -->
+        <div class="captcha-success-pill" id="captchaSuccessPill">
+          <div class="success-icon-wrap">✓</div>
+          <span class="success-text">Success</span>
+        </div>
+
+        <!-- Fail / Try Again Badge -->
+        <div class="captcha-fail-pill" id="captchaFailPill">
+          <div class="fail-icon-wrap">✕</div>
+          <span class="fail-text">Try again</span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Modal: Open on iPhone / Mobile via QR Code or Live Link -->
-  <div class="modal-backdrop" id="phoneModalBackdrop">
-    <div class="modal-dialog phone-dialog">
-      <div class="modal-header">
-        <h3>📱 Practice on your iPhone</h3>
-        <button class="modal-close-btn" id="btnClosePhoneModal">&times;</button>
+  <!-- ======================================================== -->
+  <!-- MODAL 3: ALL 26 CHALLENGES GALLERY (Quick Selector)      -->
+  <!-- ======================================================== -->
+  <div class="gallery-modal-backdrop" id="galleryModalBackdrop">
+    <div class="gallery-modal-dialog">
+      <div class="gallery-header">
+        <h3>All 26 Authentic CAPTCHAs</h3>
+        <button class="modal-close-btn" id="btnCloseGallery">&times;</button>
       </div>
-
-      <div class="modal-body text-center">
-        <p class="modal-desc">
-          Scan the QR code with your iPhone Camera or tap the live link to open:
-        </p>
-
-        <!-- QR Code Container -->
-        <div class="qr-code-box">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://role-rolls-evaluated-include.trycloudflare.com" alt="Scan with iPhone Camera" class="qr-image" id="qrImage">
-          <div class="qr-scan-badge">Scan with iPhone Camera</div>
-        </div>
-
-        <!-- Live Links Section -->
-        <div class="live-link-card">
-          <div class="link-label">🌐 Live Public HTTPS Link (Cloudflare Edge / Fast & Secure):</div>
-          <div class="link-input-group">
-            <input type="text" readonly value="https://role-rolls-evaluated-include.trycloudflare.com" id="publicLiveUrlInput" class="link-input">
-            <button class="btn-copy" id="btnCopyPublicLink" title="Copy to clipboard">Copy</button>
-          </div>
-        </div>
-
-        <div class="live-link-card subtle">
-          <div class="link-label">📶 Local Wi-Fi Link (Same Wi-Fi Router):</div>
-          <div class="link-input-group">
-            <input type="text" readonly value="http://192.168.0.103:3000" id="localWifiUrlInput" class="link-input">
-            <button class="btn-copy" id="btnCopyWifiLink" title="Copy to clipboard">Copy</button>
-          </div>
-        </div>
-
-        <!-- iPhone Safari Tip -->
-        <div class="iphone-tips-card">
-          <span class="tip-icon">💡</span>
-          <div class="tip-text">
-            <strong>iPhone Safari Pro Tip:</strong> In Safari, tap the <strong>Share button (↑)</strong> and select <strong>"Add to Home Screen"</strong> to run it as a full-screen app like Binance!
-          </div>
-        </div>
-
-        <div class="modal-footer-actions">
-          <button class="btn-primary" id="btnDonePhoneModal">Done</button>
-        </div>
+      <div class="gallery-body">
+        <p class="gallery-desc">Select any authentic challenge to practice, or let the trainer pick randomly:</p>
+        <div class="gallery-grid" id="galleryGridContainer"></div>
       </div>
     </div>
   </div>

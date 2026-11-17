@@ -6,4 +6,5 @@ node_modules/
 server.js
 measure.ps1
 package.json
+*.mp4
 

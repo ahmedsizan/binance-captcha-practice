@@ -1,18 +1,18 @@
 /**
- * BINANCE 3x3 IMAGE SELECTION CAPTCHA TRAINER
- * Authentic verification practice with 10-second auto-cycle,
- * millisecond speed calculation, and keyboard shortcuts.
+ * BINANCE AIRDROP & CAPTCHA SPEEDRUN PRACTICE ENGINE
+ * Authentic 3-Second Airdrop Countdown, Random 26-Challenge Rotation,
+ * Mobile-First Optimized, Zero-Audio Silent Execution.
  */
 
 (function () {
   'use strict';
 
-  // --- 26 Authentic Challenges from User's Screenshots (De-duplicated) ---
+  // --- 26 Authentic De-duplicated Challenges from Binance Screenshots ---
   const CHALLENGES = [
     {
       id: 0,
       keyword: 'panda',
-      title: 'Picture 1 of 26 (panda A)',
+      title: 'Challenge #1 (Panda A)',
       badge: '#1 PANDA A',
       imageSrc: 'assets/challenges/challenge_1_panda.png',
       correctIndices: [1, 3, 4]
@@ -20,7 +20,7 @@
     {
       id: 1,
       keyword: 'elephant',
-      title: 'Picture 2 of 26 (elephant A)',
+      title: 'Challenge #2 (Elephant A)',
       badge: '#2 ELEPHANT A',
       imageSrc: 'assets/challenges/challenge_2_elephant.jpg',
       correctIndices: [2, 5, 6, 7]
@@ -28,7 +28,7 @@
     {
       id: 2,
       keyword: 'bicycle',
-      title: 'Picture 3 of 26 (bicycle A)',
+      title: 'Challenge #3 (Bicycle A)',
       badge: '#3 BICYCLE A',
       imageSrc: 'assets/challenges/challenge_3_bicycle.png',
       correctIndices: [1, 2, 7]
@@ -36,7 +36,7 @@
     {
       id: 3,
       keyword: 'elephant',
-      title: 'Picture 4 of 26 (elephant B)',
+      title: 'Challenge #4 (Elephant B)',
       badge: '#4 ELEPHANT B',
       imageSrc: 'assets/challenges/challenge_4_elephant.jpg',
       correctIndices: [1, 2, 8]
@@ -44,7 +44,7 @@
     {
       id: 4,
       keyword: 'panda',
-      title: 'Picture 5 of 26 (panda B)',
+      title: 'Challenge #5 (Panda B)',
       badge: '#5 PANDA B',
       imageSrc: 'assets/challenges/challenge_5_panda.png',
       correctIndices: [1, 6, 7]
@@ -52,7 +52,7 @@
     {
       id: 5,
       keyword: 'bicycle',
-      title: 'Picture 6 of 26 (bicycle B)',
+      title: 'Challenge #6 (Bicycle B)',
       badge: '#6 BICYCLE B',
       imageSrc: 'assets/challenges/challenge_6_bicycle.jpg',
       correctIndices: [0, 4, 5]
@@ -60,7 +60,7 @@
     {
       id: 6,
       keyword: 'airplane',
-      title: 'Picture 7 of 26 (airplane)',
+      title: 'Challenge #7 (Airplane)',
       badge: '#7 AIRPLANE',
       imageSrc: 'assets/challenges/challenge_7_airplane.jpg',
       correctIndices: [0, 3, 8]
@@ -68,7 +68,7 @@
     {
       id: 7,
       keyword: 'calculator',
-      title: 'Picture 8 of 26 (calculator A)',
+      title: 'Challenge #8 (Calculator A)',
       badge: '#8 CALCULATOR A',
       imageSrc: 'assets/challenges/challenge_8_calculator.jpg',
       correctIndices: [1, 5, 6]
@@ -76,7 +76,7 @@
     {
       id: 8,
       keyword: 'pencil',
-      title: 'Picture 9 of 26 (pencil)',
+      title: 'Challenge #9 (Pencil)',
       badge: '#9 PENCIL',
       imageSrc: 'assets/challenges/challenge_9_pencil.jpg',
       correctIndices: [0, 1, 3, 4, 7, 8]
@@ -84,7 +84,7 @@
     {
       id: 9,
       keyword: 'scissors',
-      title: 'Picture 10 of 26 (scissors A)',
+      title: 'Challenge #10 (Scissors A)',
       badge: '#10 SCISSORS A',
       imageSrc: 'assets/challenges/challenge_10_scissors.jpg',
       correctIndices: [1, 2, 3, 5, 8]
@@ -92,7 +92,7 @@
     {
       id: 10,
       keyword: 'notebook',
-      title: 'Picture 11 of 26 (notebook A)',
+      title: 'Challenge #11 (Notebook A)',
       badge: '#11 NOTEBOOK A',
       imageSrc: 'assets/challenges/challenge_11_notebook.jpg',
       correctIndices: [0, 4, 7]
@@ -100,7 +100,7 @@
     {
       id: 11,
       keyword: 'calculator',
-      title: 'Picture 12 of 26 (calculator B)',
+      title: 'Challenge #12 (Calculator B)',
       badge: '#12 CALCULATOR B',
       imageSrc: 'assets/challenges/challenge_12_calculator.jpg',
       correctIndices: [1, 3, 5, 7, 8]
@@ -108,7 +108,7 @@
     {
       id: 12,
       keyword: 'scissors',
-      title: 'Picture 13 of 26 (scissors B)',
+      title: 'Challenge #13 (Scissors B)',
       badge: '#13 SCISSORS B',
       imageSrc: 'assets/challenges/challenge_13_scissors.jpg',
       correctIndices: [1, 2, 4, 5, 6, 7, 8]
@@ -116,7 +116,7 @@
     {
       id: 13,
       keyword: 'calculator',
-      title: 'Picture 14 of 26 (calculator C)',
+      title: 'Challenge #14 (Calculator C)',
       badge: '#14 CALCULATOR C',
       imageSrc: 'assets/challenges/challenge_14_calculator.jpg',
       correctIndices: [2, 3, 5, 7, 8]
@@ -124,7 +124,7 @@
     {
       id: 14,
       keyword: 'scissors',
-      title: 'Picture 15 of 26 (scissors C)',
+      title: 'Challenge #15 (Scissors C)',
       badge: '#15 SCISSORS C',
       imageSrc: 'assets/challenges/challenge_15_scissors.jpg',
       correctIndices: [0, 1, 2, 3, 4, 5, 6, 7]
@@ -132,7 +132,7 @@
     {
       id: 15,
       keyword: 'notebook',
-      title: 'Picture 16 of 26 (notebook B)',
+      title: 'Challenge #16 (Notebook B)',
       badge: '#16 NOTEBOOK B',
       imageSrc: 'assets/challenges/challenge_16_notebook.jpg',
       correctIndices: [3, 4, 6, 7, 8]
@@ -140,7 +140,7 @@
     {
       id: 16,
       keyword: 'calculator',
-      title: 'Picture 17 of 26 (calculator D)',
+      title: 'Challenge #17 (Calculator D)',
       badge: '#17 CALCULATOR D',
       imageSrc: 'assets/challenges/challenge_17_calculator.jpg',
       correctIndices: [0, 1, 2, 3, 5, 6, 7]
@@ -148,7 +148,7 @@
     {
       id: 17,
       keyword: 'notebook',
-      title: 'Picture 18 of 26 (notebook C)',
+      title: 'Challenge #18 (Notebook C)',
       badge: '#18 NOTEBOOK C',
       imageSrc: 'assets/challenges/challenge_18_notebook.jpg',
       correctIndices: [2, 4, 6]
@@ -156,7 +156,7 @@
     {
       id: 18,
       keyword: 'notebook',
-      title: 'Picture 19 of 26 (notebook D)',
+      title: 'Challenge #19 (Notebook D)',
       badge: '#19 NOTEBOOK D',
       imageSrc: 'assets/challenges/challenge_19_notebook.jpg',
       correctIndices: [3, 6, 7]
@@ -164,7 +164,7 @@
     {
       id: 19,
       keyword: 'notebook',
-      title: 'Picture 20 of 26 (notebook E)',
+      title: 'Challenge #20 (Notebook E)',
       badge: '#20 NOTEBOOK E',
       imageSrc: 'assets/challenges/challenge_20_notebook.jpg',
       correctIndices: [1, 4, 5, 7, 8]
@@ -172,7 +172,7 @@
     {
       id: 20,
       keyword: 'notebook',
-      title: 'Picture 21 of 26 (notebook F)',
+      title: 'Challenge #21 (Notebook F)',
       badge: '#21 NOTEBOOK F',
       imageSrc: 'assets/challenges/challenge_21_notebook.jpg',
       correctIndices: [3, 4]
@@ -180,7 +180,7 @@
     {
       id: 21,
       keyword: 'panda',
-      title: 'Picture 22 of 26 (panda C)',
+      title: 'Challenge #22 (Panda C)',
       badge: '#22 PANDA C',
       imageSrc: 'assets/challenges/challenge_22_panda.png',
       correctIndices: [0, 2, 3, 8]
@@ -188,7 +188,7 @@
     {
       id: 22,
       keyword: 'panda',
-      title: 'Picture 23 of 26 (panda D)',
+      title: 'Challenge #23 (Panda D)',
       badge: '#23 PANDA D',
       imageSrc: 'assets/challenges/challenge_23_panda.png',
       correctIndices: [2, 5, 7]
@@ -196,7 +196,7 @@
     {
       id: 23,
       keyword: 'car',
-      title: 'Picture 24 of 26 (car)',
+      title: 'Challenge #24 (Car)',
       badge: '#24 CAR',
       imageSrc: 'assets/challenges/challenge_24_car.png',
       correctIndices: [1, 7]
@@ -204,7 +204,7 @@
     {
       id: 24,
       keyword: 'elephant',
-      title: 'Picture 25 of 26 (elephant C)',
+      title: 'Challenge #25 (Elephant C)',
       badge: '#25 ELEPHANT C',
       imageSrc: 'assets/challenges/challenge_25_elephant.png',
       correctIndices: [5, 8]
@@ -212,564 +212,551 @@
     {
       id: 25,
       keyword: 'bicycle',
-      title: 'Picture 26 of 26 (bicycle C)',
+      title: 'Challenge #26 (Bicycle C)',
       badge: '#26 BICYCLE C',
       imageSrc: 'assets/challenges/challenge_26_bicycle.png',
       correctIndices: [0, 2, 3, 4, 5]
     }
   ];
 
-  const CONFIG = {
-    ROUND_DURATION_MS: 10000 // 10 seconds per round
+  // --- Keyboard Mapping (1-9 and QWE/ASD/ZXC) ---
+  const KEY_MAP = {
+    '1': 0, '2': 1, '3': 2,
+    '4': 3, '5': 4, '6': 5,
+    '7': 6, '8': 7, '9': 8,
+    'q': 0, 'w': 1, 'e': 2,
+    'a': 3, 's': 4, 'd': 5,
+    'z': 6, 'x': 7, 'c': 8,
+    'Q': 0, 'W': 1, 'E': 2,
+    'A': 3, 'S': 4, 'D': 5,
+    'Z': 6, 'X': 7, 'C': 8
   };
 
   // --- Application State ---
   const state = {
+    mode: 'countdown', // 'countdown' (3-sec airdrop) or 'rapid' (instant captchas)
     currentChallengeIndex: 0,
     selectedIndices: new Set(),
-    roundStartTime: 0,
-    roundActive: false,
-    autoCycleEnabled: true,
-    soundEnabled: true,
-    currentRoundNum: 0,
+    countdownActive: false,
+    countdownSeconds: 3,
+    captchaActive: false,
+    captchaStartTime: 0,
     stats: {
-      totalRounds: 0,
-      solvedRounds: 0,
-      failedRounds: 0,
-      times: [],
-      bestTime: null
+      totalSolved: 0,
+      totalAttempts: 0,
+      bestTime: null,
+      times: []
     }
   };
 
   // --- DOM Elements ---
   const DOM = {
-    captchaCard: document.getElementById('captchaCard'),
-    captchaRawImg: document.getElementById('captchaRawImg'),
-    promptKeyword: document.getElementById('promptKeyword'),
-    interactiveGrid: document.getElementById('interactiveGrid'),
+    // Mode toggles
+    btnModeCountdown: document.getElementById('btnModeCountdown'),
+    btnModeInstant: document.getElementById('btnModeInstant'),
+
+    // Airdrop Card elements
+    airdropStatusBadge: document.getElementById('airdropStatusBadge'),
+    badgeText: document.getElementById('badgeText'),
+    coinNameDisplay: document.getElementById('coinNameDisplay'),
+    coinSubDisplay: document.getElementById('coinSubDisplay'),
+    claimAmountDisplay: document.getElementById('claimAmountDisplay'),
+    startsInLabel: document.getElementById('startsInLabel'),
+    countdownDisplay: document.getElementById('countdownDisplay'),
+    btnClaimAction: document.getElementById('btnClaimAction'),
+    btnClaimText: document.getElementById('btnClaimText'),
+
+    // Bottom Navigation
+    btnRestartRound: document.getElementById('btnRestartRound'),
+    btnOpenGalleryModal: document.getElementById('btnOpenGalleryModal'),
+    btnHeaderMore: document.getElementById('btnHeaderMore'),
+
+    // Review Sheet
+    reviewSheetBackdrop: document.getElementById('reviewSheetBackdrop'),
+    btnCancelReview: document.getElementById('btnCancelReview'),
+    btnConfirmReview: document.getElementById('btnConfirmReview'),
+
+    // Captcha Modal
+    captchaBackdrop: document.getElementById('captchaBackdrop'),
+    captchaModalCard: document.getElementById('captchaModalCard'),
+    captchaLoadingOverlay: document.getElementById('captchaLoadingOverlay'),
+    captchaImg: document.getElementById('captchaImg'),
     gridCells: document.querySelectorAll('.grid-cell'),
-    timerBarFill: document.getElementById('timerBarFill'),
-    timerCountdown: document.getElementById('timerCountdown'),
-    btnVerifyHotspot: document.getElementById('btnVerifyHotspot'),
-    btnRefreshHotspot: document.getElementById('btnRefreshHotspot'),
-    btnCloseHotspot: document.getElementById('btnCloseHotspot'),
-    statusBanner: document.getElementById('statusBanner'),
-    statusIcon: document.getElementById('statusIcon'),
-    statusTitle: document.getElementById('statusTitle'),
-    statusDesc: document.getElementById('statusDesc'),
-    challengeIndicator: document.getElementById('challengeIndicator'),
-    liveTimeDisplay: document.getElementById('liveTimeDisplay'),
-    navTimerStatus: document.getElementById('navTimerStatus'),
-    btnSoundToggle: document.getElementById('btnSoundToggle'),
-    soundIcon: document.getElementById('soundIcon'),
-    btnResetStats: document.getElementById('btnResetStats'),
+    btnCloseCaptcha: document.getElementById('btnCloseCaptcha'),
+    btnRefreshCaptcha: document.getElementById('btnRefreshCaptcha'),
+    btnVerifyCaptcha: document.getElementById('btnVerifyCaptcha'),
+    captchaSuccessPill: document.getElementById('captchaSuccessPill'),
+    captchaFailPill: document.getElementById('captchaFailPill'),
+
+    // Scoreboard & Solve Time Card (User marked area)
+    cardLastSolveTime: document.getElementById('cardLastSolveTime'),
+    cardBestSolveTime: document.getElementById('cardBestSolveTime'),
+    cardSpeedRating: document.getElementById('cardSpeedRating'),
+    cardAvgSpeed: document.getElementById('cardAvgSpeed'),
+    cardTotalSolvedText: document.getElementById('cardTotalSolvedText'),
+    btnQuickPractice: document.getElementById('btnQuickPractice'),
     statLastTime: document.getElementById('statLastTime'),
-    statLastSub: document.getElementById('statLastSub'),
     statBestTime: document.getElementById('statBestTime'),
-    statBestSub: document.getElementById('statBestSub'),
     statAvgTime: document.getElementById('statAvgTime'),
-    statAvgSub: document.getElementById('statAvgSub'),
-    statAccuracy: document.getElementById('statAccuracy'),
-    statRoundsPlayed: document.getElementById('statRoundsPlayed'),
-    rankBadge: document.getElementById('rankBadge'),
-    benchmarkFill: document.getElementById('benchmarkFill'),
-    historyList: document.getElementById('historyList'),
-    tabChips: document.querySelectorAll('.tab-chip'),
-    imgModalBackdrop: document.getElementById('imgModalBackdrop'),
-    btnOpenImgModal: document.getElementById('btnOpenImgModal'),
-    btnCloseImgModal: document.getElementById('btnCloseImgModal'),
-    btnDoneModal: document.getElementById('btnDoneModal'),
-    previewCards: document.querySelectorAll('.preview-card'),
-    phoneModalBackdrop: document.getElementById('phoneModalBackdrop'),
-    btnOpenPhoneModal: document.getElementById('btnOpenPhoneModal'),
-    btnClosePhoneModal: document.getElementById('btnClosePhoneModal'),
-    btnDonePhoneModal: document.getElementById('btnDonePhoneModal'),
-    btnCopyPublicLink: document.getElementById('btnCopyPublicLink'),
-    btnCopyWifiLink: document.getElementById('btnCopyWifiLink'),
-    publicLiveUrlInput: document.getElementById('publicLiveUrlInput'),
-    localWifiUrlInput: document.getElementById('localWifiUrlInput')
+    statTotalSolved: document.getElementById('statTotalSolved'),
+    btnResetStats: document.getElementById('btnResetStats'),
+
+    // Gallery Modal
+    galleryModalBackdrop: document.getElementById('galleryModalBackdrop'),
+    galleryGridContainer: document.getElementById('galleryGridContainer'),
+    btnCloseGallery: document.getElementById('btnCloseGallery')
   };
 
-  // --- Web Audio API Synthesizer ---
-  let audioCtx = null;
-  function getAudioContext() {
-    if (!audioCtx) {
-      const AudioClass = window.AudioContext || window.webkitAudioContext;
-      if (AudioClass) {
-        audioCtx = new AudioClass();
-      }
-    }
-    if (audioCtx && audioCtx.state === 'suspended') {
-      audioCtx.resume();
-    }
-    return audioCtx;
+  // --- Random Challenge Selector (Never picks same challenge consecutively) ---
+  function getRandomChallengeIndex() {
+    if (CHALLENGES.length <= 1) return 0;
+    let nextIdx;
+    do {
+      nextIdx = Math.floor(Math.random() * CHALLENGES.length);
+    } while (nextIdx === state.currentChallengeIndex);
+    return nextIdx;
   }
 
-  function playSuccessSound() {
-    if (!state.soundEnabled) return;
-    try {
-      const ctx = getAudioContext();
-      if (!ctx) return;
-      const now = ctx.currentTime;
-      // High-grade pleasant Binance major chord (E5 -> G#5 -> B5)
-      const freqs = [659.25, 830.61, 987.77];
-      freqs.forEach((freq, i) => {
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(freq, now + i * 0.05);
-
-        gain.gain.setValueAtTime(0, now + i * 0.05);
-        gain.gain.linearRampToValueAtTime(0.2, now + i * 0.05 + 0.02);
-        gain.gain.exponentialRampToValueAtTime(0.0001, now + i * 0.05 + 0.6);
-
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-        osc.start(now + i * 0.05);
-        osc.stop(now + i * 0.05 + 0.65);
-      });
-    } catch (e) {
-      console.warn('Audio play error:', e);
-    }
-  }
-
-  function playFailSound() {
-    if (!state.soundEnabled) return;
-    try {
-      const ctx = getAudioContext();
-      if (!ctx) return;
-      const now = ctx.currentTime;
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      osc.type = 'sawtooth';
-      osc.frequency.setValueAtTime(170, now);
-      osc.frequency.exponentialRampToValueAtTime(80, now + 0.28);
-
-      gain.gain.setValueAtTime(0.22, now);
-      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.28);
-
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-      osc.start(now);
-      osc.stop(now + 0.3);
-    } catch (e) {
-      console.warn('Audio play error:', e);
-    }
-  }
-
-  function playClickSound() {
-    if (!state.soundEnabled) return;
-    try {
-      const ctx = getAudioContext();
-      if (!ctx) return;
-      const now = ctx.currentTime;
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(650, now);
-
-      gain.gain.setValueAtTime(0.06, now);
-      gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.04);
-
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-      osc.start(now);
-      osc.stop(now + 0.05);
-    } catch (e) {
-      // ignore
-    }
-  }
-
-  function playTickSound() {
-    if (!state.soundEnabled) return;
-    try {
-      const ctx = getAudioContext();
-      if (!ctx) return;
-      const now = ctx.currentTime;
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(950, now);
-
-      gain.gain.setValueAtTime(0.05, now);
-      gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.035);
-
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-      osc.start(now);
-      osc.stop(now + 0.04);
-    } catch (e) {
-      // ignore
-    }
-  }
-
-  // --- Local Storage Management ---
-  function loadSavedStats() {
-    try {
-      const saved = localStorage.getItem('binance_img_captcha_stats');
-      if (saved) {
-        state.stats = JSON.parse(saved);
-      }
-    } catch (e) {
-      console.warn('Could not read stats from localStorage:', e);
-    }
-  }
-
-  function saveStats() {
-    try {
-      localStorage.setItem('binance_img_captcha_stats', JSON.stringify(state.stats));
-    } catch (e) {
-      // ignore
-    }
-  }
-
-  // --- Load Challenge ---
+  // --- Load a Specific or Random Challenge ---
   function loadChallenge(index) {
     state.currentChallengeIndex = index;
     const challenge = CHALLENGES[index];
 
-    // Clear selections
+    // Reset selection state
     state.selectedIndices.clear();
     DOM.gridCells.forEach(cell => cell.classList.remove('selected'));
+    DOM.captchaSuccessPill.classList.remove('visible');
+    DOM.captchaFailPill.classList.remove('visible');
 
-    // Reset status banner
-    DOM.statusBanner.classList.remove('visible', 'success', 'fail');
-
-    // Update image and keyword
-    DOM.captchaRawImg.src = challenge.imageSrc;
-    DOM.promptKeyword.textContent = challenge.keyword;
-    DOM.challengeIndicator.textContent = challenge.title;
-
-    // Update active tab chip
-    if (DOM.tabChips) {
-      DOM.tabChips.forEach(chip => {
-        const isActive = parseInt(chip.dataset.challenge, 10) === index;
-        chip.classList.toggle('active', isActive);
-        if (isActive) {
-          chip.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-        }
-      });
-    }
-
-    // Start 10-second round
-    startRound();
+    // Update challenge image
+    DOM.captchaImg.src = challenge.imageSrc;
   }
 
-  // --- 10-Second Timer Engine ---
-  let timerRafId = null;
-  let lastTickSecond = 10;
+  // --- Open CAPTCHA Modal with Authentic Brief Loading Screen ---
+  function openCaptchaModal() {
+    state.captchaActive = true;
+    DOM.captchaBackdrop.classList.add('open');
 
-  function startRound() {
-    state.roundActive = true;
-    state.roundStartTime = performance.now();
-    state.currentRoundNum++;
-    lastTickSecond = 10;
-
-    if (timerRafId) {
-      cancelAnimationFrame(timerRafId);
-    }
-
-    runTimerTick();
-  }
-
-  function runTimerTick() {
-    if (!state.roundActive) return;
-
-    const now = performance.now();
-    const elapsedMs = now - state.roundStartTime;
-    const remainingMs = Math.max(0, CONFIG.ROUND_DURATION_MS - elapsedMs);
-
-    // Live Stopwatch
-    DOM.liveTimeDisplay.textContent = (elapsedMs / 1000).toFixed(2) + 's';
-
-    if (state.autoCycleEnabled) {
-      // Countdown Progress Bar
-      const percent = (remainingMs / CONFIG.ROUND_DURATION_MS) * 100;
-      DOM.timerBarFill.style.width = `${percent}%`;
-
-      const remainingSec = (remainingMs / 1000).toFixed(1);
-      DOM.timerCountdown.textContent = `${remainingSec}s`;
-
-      // Warning color under 3s
-      if (remainingMs <= 3000) {
-        DOM.timerBarFill.classList.add('warning');
-        const currentSecInt = Math.ceil(remainingMs / 1000);
-        if (currentSecInt < lastTickSecond) {
-          lastTickSecond = currentSecInt;
-          playTickSound();
-        }
-      } else {
-        DOM.timerBarFill.classList.remove('warning');
-      }
-
-      // Time Expired (10s)
-      if (remainingMs <= 0) {
-        handleTimeout();
-        return;
-      }
-    } else {
-      DOM.timerBarFill.style.width = '100%';
-      DOM.timerCountdown.textContent = 'Paused';
-    }
-
-    timerRafId = requestAnimationFrame(runTimerTick);
-  }
-
-  function stopTimer() {
-    state.roundActive = false;
-    if (timerRafId) {
-      cancelAnimationFrame(timerRafId);
-      timerRafId = null;
-    }
-  }
-
-  // --- Timeout Handling ---
-  function handleTimeout() {
-    stopTimer();
-    playFailSound();
-
-    DOM.captchaCard.classList.add('shake');
-    setTimeout(() => DOM.captchaCard.classList.remove('shake'), 450);
-
-    DOM.statusTitle.textContent = 'Verification Timed Out';
-    DOM.statusDesc.textContent = '10.0s exceeded. Loading next challenge...';
-    DOM.statusIcon.textContent = '⏱';
-    DOM.statusBanner.classList.add('visible', 'fail');
-
-    // Update stats
-    state.stats.totalRounds++;
-    state.stats.failedRounds++;
-    saveStats();
-    updateStatsUI('10.0s (Timeout)', false);
-    addHistoryItem('Timed Out', '10.00s', false);
-
-    // Advance to next challenge (0 -> 1 -> 2 -> 3 -> 0)
-    const nextIdx = (state.currentChallengeIndex + 1) % CHALLENGES.length;
-
+    // Show quick 180ms loading overlay (authenticity matching Binance app)
+    DOM.captchaLoadingOverlay.classList.add('visible');
     setTimeout(() => {
-      loadChallenge(nextIdx);
-    }, 1100);
+      DOM.captchaLoadingOverlay.classList.remove('visible');
+      state.captchaStartTime = performance.now();
+    }, 180);
   }
 
-  // --- Verification Validation ---
-  function verifySelection() {
-    if (!state.roundActive) return;
-    stopTimer();
+  function closeCaptchaModal() {
+    state.captchaActive = false;
+    DOM.captchaBackdrop.classList.remove('open');
+    DOM.captchaSuccessPill.classList.remove('visible');
+    DOM.captchaFailPill.classList.remove('visible');
+    state.selectedIndices.clear();
+    DOM.gridCells.forEach(cell => cell.classList.remove('selected'));
+  }
 
-    const now = performance.now();
-    const roundTotalSec = ((now - state.roundStartTime) / 1000).toFixed(2);
+  // --- 3-Second Airdrop Countdown Engine ---
+  let countdownTimerId = null;
+
+  function startCountdownCycle() {
+    if (countdownTimerId) {
+      clearInterval(countdownTimerId);
+      countdownTimerId = null;
+    }
+
+    state.countdownActive = true;
+    state.countdownSeconds = 3;
+
+    // Reset active card to "Upcoming" state
+    DOM.airdropStatusBadge.className = 'status-badge upcoming';
+    DOM.badgeText.textContent = 'Upcoming';
+    DOM.coinNameDisplay.textContent = 'To Be Revealed'; // Unknown coin name per instruction
+    DOM.coinSubDisplay.textContent = 'Project Alpha';
+    DOM.claimAmountDisplay.textContent = '???';
+    DOM.startsInLabel.textContent = 'Starts in';
+    DOM.countdownDisplay.textContent = `00H : 00M : 03S`;
+    DOM.countdownDisplay.classList.remove('active-glow');
+
+    // Claim button disabled during countdown
+    DOM.btnClaimAction.className = 'btn-claim-primary disabled';
+    DOM.btnClaimText.textContent = 'Claim';
+
+    countdownTimerId = setInterval(() => {
+      state.countdownSeconds--;
+
+      if (state.countdownSeconds > 0) {
+        const secStr = state.countdownSeconds < 10 ? `0${state.countdownSeconds}` : `${state.countdownSeconds}`;
+        DOM.countdownDisplay.textContent = `00H : 00M : ${secStr}S`;
+      } else {
+        // Countdown reached 00S! Airdrop goes live!
+        clearInterval(countdownTimerId);
+        countdownTimerId = null;
+        triggerAirdropLive();
+      }
+    }, 1000);
+  }
+
+  // --- Trigger Airdrop Live State (Video 00:04) ---
+  function triggerAirdropLive() {
+    state.countdownActive = false;
+
+    // Update status to Ongoing
+    DOM.airdropStatusBadge.className = 'status-badge ongoing';
+    DOM.badgeText.textContent = 'Ongoing';
+    DOM.claimAmountDisplay.textContent = '72.82 ???';
+    DOM.startsInLabel.textContent = 'Ends in';
+    DOM.countdownDisplay.textContent = '23H : 59M : 59S';
+    DOM.countdownDisplay.classList.add('active-glow');
+
+    // Activate Claim button
+    DOM.btnClaimAction.className = 'btn-claim-primary active';
+    DOM.btnClaimText.textContent = 'Claim';
+  }
+
+  // --- Handle Claim Button Click ---
+  function handleClaimClick() {
+    if (DOM.btnClaimAction.classList.contains('disabled')) return;
+
+    // Open "Review your claim" bottom sheet (User must tap Confirm to proceed to CAPTCHA)
+    DOM.reviewSheetBackdrop.classList.add('open');
+  }
+
+  function proceedFromReviewToCaptcha() {
+    DOM.reviewSheetBackdrop.classList.remove('open');
+    // Load a fresh random challenge
+    loadChallenge(getRandomChallengeIndex());
+    // Open the CAPTCHA modal!
+    openCaptchaModal();
+  }
+
+  // --- Toggle Grid Cell Selection (100% SILENT - NO SOUND) ---
+  function toggleCell(index) {
+    if (!state.captchaActive) return;
+
+    if (state.selectedIndices.has(index)) {
+      state.selectedIndices.delete(index);
+      DOM.gridCells[index].classList.remove('selected');
+    } else {
+      state.selectedIndices.add(index);
+      DOM.gridCells[index].classList.add('selected');
+    }
+  }
+
+  // --- Verify User Selection ---
+  function verifyCaptcha() {
+    if (!state.captchaActive) return;
+
     const challenge = CHALLENGES[state.currentChallengeIndex];
-
-    // Check if user's selections match challenge.correctIndices exactly
     const userArray = Array.from(state.selectedIndices).sort();
     const correctArray = [...challenge.correctIndices].sort();
 
-    const isMatch = userArray.length === correctArray.length &&
-      userArray.every((val, idx) => val === correctArray[idx]);
+    const isCorrect = userArray.length === correctArray.length &&
+      userArray.every((val, i) => val === correctArray[i]);
 
-    if (isMatch) {
-      // SUCCESS!
-      handleSuccess(parseFloat(roundTotalSec));
+    const solveTimeMs = performance.now() - state.captchaStartTime;
+    const solveSec = (solveTimeMs / 1000).toFixed(2);
+
+    state.stats.totalAttempts++;
+
+    if (isCorrect) {
+      // SUCCESS (Video Frame 00:09)
+      DOM.captchaSuccessPill.classList.add('visible');
+      DOM.captchaFailPill.classList.remove('visible');
+
+      // Update stats
+      state.stats.totalSolved++;
+      state.stats.times.push(parseFloat(solveSec));
+
+      if (state.stats.bestTime === null || parseFloat(solveSec) < state.stats.bestTime) {
+        state.stats.bestTime = parseFloat(solveSec);
+      }
+
+      updateScoreboard(solveSec);
+      saveStats();
+
+      // Close modal and cycle to next round after 850ms
+      setTimeout(() => {
+        closeCaptchaModal();
+
+        if (state.mode === 'countdown') {
+          // Restart the 3-second countdown for the next airdrop attempt!
+          startCountdownCycle();
+        } else {
+          // Rapid mode: immediately open next random CAPTCHA!
+          setTimeout(() => {
+            loadChallenge(getRandomChallengeIndex());
+            openCaptchaModal();
+          }, 300);
+        }
+      }, 850);
     } else {
-      // FAILED
-      handleFail(userArray, correctArray);
+      // INCORRECT SELECTION:
+      // User instruction: "ar keo jodi ekber captcha ta vul kore tahole sathe sathe arekta captcha screen a load kore diba , vul korle amr home page a nia jaba na kintu"
+      DOM.captchaFailPill.textContent = '✕ Incorrect - Loading Next...';
+      DOM.captchaFailPill.classList.add('visible');
+      DOM.captchaSuccessPill.classList.remove('visible');
+
+      // Clear current cell selections immediately
+      state.selectedIndices.clear();
+      DOM.gridCells.forEach(cell => cell.classList.remove('selected'));
+
+      // Do NOT close the modal! Stay in the CAPTCHA modal and load a new random challenge immediately
+      setTimeout(() => {
+        loadChallenge(getRandomChallengeIndex());
+        state.captchaStartTime = performance.now();
+        DOM.captchaFailPill.classList.remove('visible');
+      }, 400);
     }
   }
 
-  function handleSuccess(totalSec) {
-    playSuccessSound();
-
-    DOM.statusIcon.textContent = '✓';
-    DOM.statusTitle.textContent = 'Verification Success';
-
-    const speedPercentile = calculatePercentile(totalSec);
-    DOM.statusDesc.textContent = `Completed in ${totalSec.toFixed(2)}s! ${speedPercentile}`;
-    DOM.statusBanner.classList.add('visible', 'success');
-
-    // Update Stats
-    state.stats.totalRounds++;
-    state.stats.solvedRounds++;
-    state.stats.times.push(totalSec);
-
-    if (state.stats.bestTime === null || totalSec < state.stats.bestTime) {
-      state.stats.bestTime = totalSec;
+  // --- Update Scoreboard & Solve Time Card UI ---
+  function updateScoreboard(lastSolveSec) {
+    // 1. Update Card 2 (User marked area)
+    if (DOM.cardLastSolveTime && lastSolveSec) {
+      DOM.cardLastSolveTime.textContent = `${lastSolveSec} s`;
+      DOM.cardLastSolveTime.classList.remove('updated');
+      void DOM.cardLastSolveTime.offsetWidth; // trigger reflow for animation
+      DOM.cardLastSolveTime.classList.add('updated');
     }
 
-    saveStats();
-    updateStatsUI(`${totalSec.toFixed(2)}s`, true);
-    addHistoryItem('Success', `${totalSec.toFixed(2)}s`, true);
-
-    // Advance to next challenge
-    const nextIdx = (state.currentChallengeIndex + 1) % CHALLENGES.length;
-
-    // Auto-advance after 1.25s celebration
-    setTimeout(() => {
-      loadChallenge(nextIdx);
-    }, 1300);
-  }
-
-  function handleFail(userSel, correctSel) {
-    playFailSound();
-
-    DOM.captchaCard.classList.add('shake');
-    setTimeout(() => DOM.captchaCard.classList.remove('shake'), 450);
-
-    DOM.statusIcon.textContent = '✕';
-    DOM.statusTitle.textContent = 'Verification Failed';
-
-    let failMsg = 'Incorrect selection. Try again!';
-    if (userSel.length === 0) {
-      failMsg = 'No images selected! Please select all targets.';
-    } else if (userSel.length < correctSel.length) {
-      failMsg = 'You missed some target images!';
-    } else if (userSel.length > correctSel.length) {
-      failMsg = 'You selected non-target images!';
+    if (DOM.cardBestSolveTime && state.stats.bestTime !== null) {
+      DOM.cardBestSolveTime.textContent = `${state.stats.bestTime.toFixed(2)} s`;
     }
 
-    DOM.statusDesc.textContent = failMsg;
-    DOM.statusBanner.classList.add('visible', 'fail');
+    if (DOM.cardAvgSpeed && state.stats.times.length > 0) {
+      const avg = state.stats.times.reduce((a, b) => a + b, 0) / state.stats.times.length;
+      DOM.cardAvgSpeed.textContent = `Avg: ${avg.toFixed(2)} s`;
+    }
 
-    // Update Stats
-    state.stats.totalRounds++;
-    state.stats.failedRounds++;
-    saveStats();
-    updateStatsUI('Incorrect', false);
-    addHistoryItem('Failed', 'Incorrect', false);
+    if (DOM.cardTotalSolvedText) {
+      DOM.cardTotalSolvedText.textContent = `Solved: ${state.stats.totalSolved} / ${CHALLENGES.length}`;
+    }
 
-    // Advance to next challenge
-    const nextIdx = (state.currentChallengeIndex + 1) % CHALLENGES.length;
+    if (DOM.cardSpeedRating && lastSolveSec) {
+      const sec = parseFloat(lastSolveSec);
+      if (sec < 1.5) {
+        DOM.cardSpeedRating.textContent = '⚡ Godspeed! (< 1.5s)';
+      } else if (sec < 2.5) {
+        DOM.cardSpeedRating.textContent = '🚀 Lightning Fast! (< 2.5s)';
+      } else if (sec < 4.0) {
+        DOM.cardSpeedRating.textContent = '🎯 Great Speed!';
+      } else {
+        DOM.cardSpeedRating.textContent = '👍 Solved! Try < 2.5s';
+      }
+    }
 
-    setTimeout(() => {
-      loadChallenge(nextIdx);
-    }, 1200);
-  }
+    // 2. Update Legacy Scoreboard if present
+    if (DOM.statLastTime && lastSolveSec) {
+      DOM.statLastTime.textContent = `${lastSolveSec}s`;
+    }
 
-  function calculatePercentile(sec) {
-    if (sec < 1.0) return 'Godlike Speed! Faster than 99.5% of users!';
-    if (sec < 1.5) return 'Incredible! Faster than 96.8% of users!';
-    if (sec < 2.2) return 'Fast Trader! Faster than 89.2% of users!';
-    if (sec < 3.2) return 'Good Pace! Faster than 72.4% of users!';
-    return 'Verified Human! Keep practicing speed.';
-  }
-
-  // --- Statistics & UI Updates ---
-  function updateStatsUI(lastTimeText, isSuccess) {
-    DOM.statLastTime.textContent = lastTimeText;
-    DOM.statLastTime.style.color = isSuccess ? 'var(--color-success)' : 'var(--color-danger)';
-    DOM.statLastSub.textContent = isSuccess ? 'Valid selection' : 'Try sharper focus';
-
-    if (state.stats.bestTime !== null) {
+    if (DOM.statBestTime && state.stats.bestTime !== null) {
       DOM.statBestTime.textContent = `${state.stats.bestTime.toFixed(2)}s`;
-      DOM.statBestSub.textContent = getRankTitle(state.stats.bestTime);
     }
 
-    if (state.stats.times.length > 0) {
-      const sum = state.stats.times.reduce((a, b) => a + b, 0);
-      const avg = sum / state.stats.times.length;
+    if (DOM.statAvgTime && state.stats.times.length > 0) {
+      const avg = state.stats.times.reduce((a, b) => a + b, 0) / state.stats.times.length;
       DOM.statAvgTime.textContent = `${avg.toFixed(2)}s`;
-      DOM.statAvgSub.textContent = `Over ${state.stats.times.length} solves`;
     }
 
-    const total = state.stats.totalRounds;
-    const solved = state.stats.solvedRounds;
-    const accuracy = total > 0 ? Math.round((solved / total) * 100) : 0;
-    DOM.statAccuracy.textContent = `${accuracy}%`;
-    DOM.statRoundsPlayed.textContent = `${solved} / ${total} Solved`;
-
-    // Benchmark progress
-    if (state.stats.bestTime !== null) {
-      const score = Math.max(0, Math.min(100, Math.round((4.0 - state.stats.bestTime) / 3.0 * 100)));
-      DOM.benchmarkFill.style.width = `${Math.max(15, score)}%`;
-      DOM.rankBadge.textContent = getRankTitle(state.stats.bestTime).toUpperCase();
+    if (DOM.statTotalSolved) {
+      DOM.statTotalSolved.textContent = `${state.stats.totalSolved}`;
     }
   }
 
-  function getRankTitle(sec) {
-    if (sec <= 1.0) return 'Binance God';
-    if (sec <= 1.6) return 'Speed Demon';
-    if (sec <= 2.4) return 'Fast Trader';
-    if (sec <= 3.6) return 'Verified Human';
-    return 'Rookie';
+  // --- LocalStorage Stats Persistence ---
+  function saveStats() {
+    try {
+      localStorage.setItem('binance_captcha_speedrun_v2', JSON.stringify({
+        totalSolved: state.stats.totalSolved,
+        totalAttempts: state.stats.totalAttempts,
+        bestTime: state.stats.bestTime,
+        times: state.stats.times.slice(-30)
+      }));
+    } catch (e) {}
   }
 
-  function addHistoryItem(status, time, isSuccess) {
-    const emptyMsg = DOM.historyList.querySelector('.history-empty');
-    if (emptyMsg) emptyMsg.remove();
+  function loadStats() {
+    try {
+      const saved = localStorage.getItem('binance_captcha_speedrun_v2');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        state.stats.totalSolved = parsed.totalSolved || 0;
+        state.stats.totalAttempts = parsed.totalAttempts || 0;
+        state.stats.bestTime = parsed.bestTime || null;
+        state.stats.times = parsed.times || [];
+        updateScoreboard();
+      }
+    } catch (e) {}
+  }
 
-    const item = document.createElement('div');
-    item.className = `history-item ${isSuccess ? 'success' : 'fail'}`;
+  // --- Render Gallery Grid (All 26 Challenges) ---
+  function renderGallery() {
+    if (!DOM.galleryGridContainer) return;
 
-    const challenge = CHALLENGES[state.currentChallengeIndex];
-
-    item.innerHTML = `
-      <div class="history-item-left">
-        <span class="history-tag">${status}</span>
-        <span>#${state.currentRoundNum} (${challenge.keyword})</span>
+    DOM.galleryGridContainer.innerHTML = CHALLENGES.map((c, i) => `
+      <div class="gallery-card" data-idx="${i}">
+        <img src="${c.imageSrc}" alt="${c.title}" loading="lazy">
+        <div class="gallery-card-info">
+          <span class="gallery-card-badge">${c.badge}</span>
+          <span class="gallery-card-keyword">Target: <strong>${c.keyword}</strong></span>
+        </div>
       </div>
-      <div class="history-item-time">${time}</div>
-    `;
+    `).join('');
 
-    DOM.historyList.insertBefore(item, DOM.historyList.firstChild);
-
-    while (DOM.historyList.children.length > 15) {
-      DOM.historyList.removeChild(DOM.historyList.lastChild);
-    }
+    const cards = DOM.galleryGridContainer.querySelectorAll('.gallery-card');
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        const idx = parseInt(card.dataset.idx, 10);
+        DOM.galleryModalBackdrop.classList.remove('open');
+        loadChallenge(idx);
+        openCaptchaModal();
+      });
+    });
   }
 
-  // --- Grid Cell Selection ---
-  function toggleCell(index) {
-    if (!state.roundActive) return;
-    playClickSound();
+  // --- Setup Event Listeners ---
+  function setupEventListeners() {
+    // Mode Toggles
+    DOM.btnModeCountdown.addEventListener('click', () => {
+      state.mode = 'countdown';
+      DOM.btnModeCountdown.classList.add('active');
+      DOM.btnModeInstant.classList.remove('active');
+      startCountdownCycle();
+    });
 
-    const cell = DOM.gridCells[index];
-    if (state.selectedIndices.has(index)) {
-      state.selectedIndices.delete(index);
-      cell.classList.remove('selected');
-    } else {
-      state.selectedIndices.add(index);
-      cell.classList.add('selected');
+    DOM.btnModeInstant.addEventListener('click', () => {
+      state.mode = 'rapid';
+      DOM.btnModeInstant.classList.add('active');
+      DOM.btnModeCountdown.classList.remove('active');
+      if (countdownTimerId) clearInterval(countdownTimerId);
+      loadChallenge(getRandomChallengeIndex());
+      openCaptchaModal();
+    });
+
+    // Claim Action Button
+    DOM.btnClaimAction.addEventListener('click', handleClaimClick);
+
+    // Bottom Navigation Bar
+    DOM.btnRestartRound.addEventListener('click', () => {
+      startCountdownCycle();
+    });
+
+    DOM.btnOpenGalleryModal.addEventListener('click', () => {
+      DOM.galleryModalBackdrop.classList.add('open');
+    });
+
+    DOM.btnHeaderMore.addEventListener('click', () => {
+      DOM.galleryModalBackdrop.classList.add('open');
+    });
+
+    DOM.btnCloseGallery.addEventListener('click', () => {
+      DOM.galleryModalBackdrop.classList.remove('open');
+    });
+
+    DOM.galleryModalBackdrop.addEventListener('click', (e) => {
+      if (e.target === DOM.galleryModalBackdrop) {
+        DOM.galleryModalBackdrop.classList.remove('open');
+      }
+    });
+
+    // Review Sheet Buttons
+    DOM.btnCancelReview.addEventListener('click', () => {
+      DOM.reviewSheetBackdrop.classList.remove('open');
+    });
+
+    DOM.btnConfirmReview.addEventListener('click', () => {
+      proceedFromReviewToCaptcha();
+    });
+
+    DOM.reviewSheetBackdrop.addEventListener('click', (e) => {
+      if (e.target === DOM.reviewSheetBackdrop) {
+        DOM.reviewSheetBackdrop.classList.remove('open');
+      }
+    });
+
+    // 3x3 Grid Cells (Silent, fast tap)
+    DOM.gridCells.forEach(cell => {
+      cell.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const idx = parseInt(cell.dataset.index, 10);
+        toggleCell(idx);
+      });
+    });
+
+    // CAPTCHA Hotspots
+    DOM.btnVerifyCaptcha.addEventListener('click', (e) => {
+      e.stopPropagation();
+      verifyCaptcha();
+    });
+
+    DOM.btnRefreshCaptcha.addEventListener('click', (e) => {
+      e.stopPropagation();
+      // Load next random challenge
+      loadChallenge(getRandomChallengeIndex());
+    });
+
+    DOM.btnCloseCaptcha.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeCaptchaModal();
+      if (state.mode === 'countdown') {
+        startCountdownCycle();
+      }
+    });
+
+    // Quick Practice Button on Solve Time Card
+    if (DOM.btnQuickPractice) {
+      DOM.btnQuickPractice.addEventListener('click', () => {
+        loadChallenge(getRandomChallengeIndex());
+        openCaptchaModal();
+      });
     }
-  }
 
-  // --- Keyboard Shortcuts ---
-  // Maps numpad 1-9 and QWE/ASD/ZXC to grid indices 0-8
-  const KEY_MAP = {
-    // Top Row
-    '1': 0, 'q': 0, 'Q': 0,
-    '2': 1, 'w': 1, 'W': 1,
-    '3': 2, 'e': 2, 'E': 2,
+    // Reset Stats
+    if (DOM.btnResetStats) {
+      DOM.btnResetStats.addEventListener('click', () => {
+        state.stats = {
+          totalSolved: 0,
+          totalAttempts: 0,
+          bestTime: null,
+          times: []
+        };
+        saveStats();
+        if (DOM.statLastTime) DOM.statLastTime.textContent = '--';
+        if (DOM.statBestTime) DOM.statBestTime.textContent = '--';
+        if (DOM.statAvgTime) DOM.statAvgTime.textContent = '--';
+        if (DOM.statTotalSolved) DOM.statTotalSolved.textContent = '0';
+        if (DOM.cardLastSolveTime) DOM.cardLastSolveTime.textContent = '-- s';
+        if (DOM.cardBestSolveTime) DOM.cardBestSolveTime.textContent = '-- s';
+        if (DOM.cardAvgSpeed) DOM.cardAvgSpeed.textContent = 'Avg: -- s';
+        if (DOM.cardTotalSolvedText) DOM.cardTotalSolvedText.textContent = `Solved: 0 / ${CHALLENGES.length}`;
+        if (DOM.cardSpeedRating) DOM.cardSpeedRating.textContent = 'Solve a captcha to see rating';
+      });
+    }
 
-    // Middle Row
-    '4': 3, 'a': 3, 'A': 3,
-    '5': 4, 's': 4, 'S': 4,
-    '6': 5, 'd': 5, 'D': 5,
-
-    // Bottom Row
-    '7': 6, 'z': 6, 'Z': 6,
-    '8': 7, 'x': 7, 'X': 7,
-    '9': 8, 'c': 8, 'C': 8
-  };
-
-  function setupKeyboard() {
+    // Keyboard Shortcuts for Desktop Testing
     window.addEventListener('keydown', (e) => {
-      // Don't intercept if an input is focused
-      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      if (!state.captchaActive) {
+        if (e.key === ' ' || e.key === 'Enter') {
+          if (!DOM.btnClaimAction.classList.contains('disabled')) {
+            handleClaimClick();
+          }
+        }
+        return;
+      }
 
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        verifySelection();
+        verifyCaptcha();
         return;
       }
 
       if (e.key === 'r' || e.key === 'R') {
-        const nextIdx = (state.currentChallengeIndex + 1) % CHALLENGES.length;
-        loadChallenge(nextIdx);
+        loadChallenge(getRandomChallengeIndex());
         return;
       }
 
       if (e.key === 'Escape') {
-        state.selectedIndices.clear();
-        DOM.gridCells.forEach(cell => cell.classList.remove('selected'));
+        closeCaptchaModal();
         return;
       }
 
@@ -780,212 +767,29 @@
     });
   }
 
-  // --- Render Dynamic Challenge Tabs & Modal Grid ---
-  function renderDynamicChallengeUI() {
-    // 1. Practice Tab Chips
-    const tabsContainer = document.getElementById('challengeTabsBar');
-    if (tabsContainer) {
-      tabsContainer.innerHTML = `
-        <span class="tabs-label">Practice (${CHALLENGES.length}):</span>
-        ${CHALLENGES.map((c, i) => `
-          <button class="tab-chip ${i === 0 ? 'active' : ''}" data-challenge="${i}" title="${c.title}">
-            #${i + 1} ${c.keyword.charAt(0).toUpperCase() + c.keyword.slice(1)}
-          </button>
-        `).join('')}
-      `;
-      DOM.tabChips = tabsContainer.querySelectorAll('.tab-chip');
-      DOM.tabChips.forEach(chip => {
-        chip.addEventListener('click', () => {
-          const challengeIdx = parseInt(chip.dataset.challenge, 10);
-          loadChallenge(challengeIdx);
-        });
-      });
-    }
-
-    // 2. Modal Previews Grid
-    const previewGrid = document.getElementById('challengePreviewsGrid');
-    if (previewGrid) {
-      previewGrid.innerHTML = CHALLENGES.map((c, i) => `
-        <div class="preview-card" data-idx="${i}">
-          <div class="preview-badge">${c.badge}</div>
-          <img src="${c.imageSrc}" alt="${c.title}" loading="lazy">
-          <div class="preview-info">
-            <span class="preview-target">Target: <strong>${c.keyword}</strong></span>
-            <span class="preview-sol">Answers: Tile ${c.correctIndices.map(x => x + 1).join(', ')}</span>
-            <button class="btn-select-challenge" data-idx="${i}">Practice This</button>
-          </div>
-        </div>
-      `).join('');
-
-      const selectBtns = previewGrid.querySelectorAll('.btn-select-challenge');
-      selectBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const idx = parseInt(btn.dataset.idx, 10);
-          if (DOM.imgModalBackdrop) {
-            DOM.imgModalBackdrop.classList.remove('open');
-          }
-          loadChallenge(idx);
-        });
-      });
-    }
-  }
-
-  // --- Event Listeners Setup ---
-  function setupEventListeners() {
-    // 3x3 Grid Cells
-    DOM.gridCells.forEach(cell => {
-      cell.addEventListener('click', () => {
-        const idx = parseInt(cell.dataset.index, 10);
-        toggleCell(idx);
-      });
-    });
-
-    // Verify Button Hotspot
-    DOM.btnVerifyHotspot.addEventListener('click', (e) => {
-      e.stopPropagation();
-      verifySelection();
-    });
-
-    // Refresh Button Hotspot (↺)
-    DOM.btnRefreshHotspot.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const nextIdx = (state.currentChallengeIndex + 1) % CHALLENGES.length;
-      loadChallenge(nextIdx);
-    });
-
-    // Close Button Hotspot (✕)
-    DOM.btnCloseHotspot.addEventListener('click', (e) => {
-      e.stopPropagation();
-      state.selectedIndices.clear();
-      DOM.gridCells.forEach(cell => cell.classList.remove('selected'));
-    });
-
-    // Sound Toggle
-    DOM.btnSoundToggle.addEventListener('click', () => {
-      state.soundEnabled = !state.soundEnabled;
-      DOM.soundIcon.textContent = state.soundEnabled ? '🔊' : '🔇';
-      DOM.btnSoundToggle.title = `Sound Effects: ${state.soundEnabled ? 'ON' : 'OFF'}`;
-    });
-
-    // Reset Stats
-    DOM.btnResetStats.addEventListener('click', () => {
-      if (confirm('Reset all your speedrun practice stats?')) {
-        state.stats = {
-          totalRounds: 0,
-          solvedRounds: 0,
-          failedRounds: 0,
-          times: [],
-          bestTime: null
-        };
-        saveStats();
-        DOM.statLastTime.textContent = '--';
-        DOM.statLastSub.textContent = 'Ready for round 1';
-        DOM.statBestTime.textContent = '--';
-        DOM.statBestSub.textContent = 'Target: < 1.50s';
-        DOM.statAvgTime.textContent = '--';
-        DOM.statAvgSub.textContent = 'Over successful';
-        DOM.statAccuracy.textContent = '0%';
-        DOM.statRoundsPlayed.textContent = '0 / 0 Solved';
-        DOM.rankBadge.textContent = 'ROOKIE';
-        DOM.benchmarkFill.style.width = '20%';
-        DOM.historyList.innerHTML = '<div class="history-empty">Solve a CAPTCHA to record history</div>';
-      }
-    });
-
-    // Modal Events
-    DOM.btnOpenImgModal.addEventListener('click', () => {
-      DOM.imgModalBackdrop.classList.add('open');
-    });
-
-    DOM.btnCloseImgModal.addEventListener('click', () => {
-      DOM.imgModalBackdrop.classList.remove('open');
-    });
-
-    DOM.btnDoneModal.addEventListener('click', () => {
-      DOM.imgModalBackdrop.classList.remove('open');
-    });
-
-    DOM.imgModalBackdrop.addEventListener('click', (e) => {
-      if (e.target === DOM.imgModalBackdrop) {
-        DOM.imgModalBackdrop.classList.remove('open');
-      }
-    });
-
-    // Phone Modal Handlers
-    if (DOM.btnOpenPhoneModal) {
-      DOM.btnOpenPhoneModal.addEventListener('click', () => {
-        DOM.phoneModalBackdrop.classList.add('open');
-      });
-    }
-
-    if (DOM.btnClosePhoneModal) {
-      DOM.btnClosePhoneModal.addEventListener('click', () => {
-        DOM.phoneModalBackdrop.classList.remove('open');
-      });
-    }
-
-    if (DOM.btnDonePhoneModal) {
-      DOM.btnDonePhoneModal.addEventListener('click', () => {
-        DOM.phoneModalBackdrop.classList.remove('open');
-      });
-    }
-
-    if (DOM.phoneModalBackdrop) {
-      DOM.phoneModalBackdrop.addEventListener('click', (e) => {
-        if (e.target === DOM.phoneModalBackdrop) {
-          DOM.phoneModalBackdrop.classList.remove('open');
-        }
-      });
-    }
-
-    // Copy Public Link
-    if (DOM.btnCopyPublicLink && DOM.publicLiveUrlInput) {
-      DOM.btnCopyPublicLink.addEventListener('click', () => {
-        navigator.clipboard.writeText(DOM.publicLiveUrlInput.value).then(() => {
-          DOM.btnCopyPublicLink.textContent = 'Copied!';
-          DOM.btnCopyPublicLink.classList.add('copied');
-          setTimeout(() => {
-            DOM.btnCopyPublicLink.textContent = 'Copy';
-            DOM.btnCopyPublicLink.classList.remove('copied');
-          }, 2000);
-        }).catch(() => {
-          DOM.publicLiveUrlInput.select();
-          document.execCommand('copy');
-        });
-      });
-    }
-
-    // Copy Wi-Fi Link
-    if (DOM.btnCopyWifiLink && DOM.localWifiUrlInput) {
-      DOM.btnCopyWifiLink.addEventListener('click', () => {
-        navigator.clipboard.writeText(DOM.localWifiUrlInput.value).then(() => {
-          DOM.btnCopyWifiLink.textContent = 'Copied!';
-          DOM.btnCopyWifiLink.classList.add('copied');
-          setTimeout(() => {
-            DOM.btnCopyWifiLink.textContent = 'Copy';
-            DOM.btnCopyWifiLink.classList.remove('copied');
-          }, 2000);
-        }).catch(() => {
-          DOM.localWifiUrlInput.select();
-          document.execCommand('copy');
-        });
-      });
-    }
+  // --- Clock updater for authentic iOS / Android status bar ---
+  function updateDeviceClock() {
+    const clockEl = document.getElementById('deviceClock');
+    if (!clockEl) return;
+    const now = new Date();
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    hours = hours % 12 || 12;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    clockEl.textContent = `${hours}:${minutes}`;
   }
 
   // --- Bootstrap ---
   function init() {
-    loadSavedStats();
-    renderDynamicChallengeUI();
+    loadStats();
+    renderGallery();
     setupEventListeners();
-    setupKeyboard();
+    updateDeviceClock();
+    setInterval(updateDeviceClock, 30000);
 
-    if (state.stats.bestTime !== null) {
-      updateStatsUI(`${state.stats.bestTime.toFixed(2)}s`, true);
-    }
-
-    // Load first challenge (#1 Panda)
-    loadChallenge(0);
+    // Initial load: start the 3-second countdown cycle
+    loadChallenge(getRandomChallengeIndex());
+    startCountdownCycle();
   }
 
   if (document.readyState === 'loading') {
